@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F8B226E-7822-4297-A6CD-74EB17F7634C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Siage.Services.Core</RootNamespace>
+    <AssemblyName>Siage.Services.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <JSLintSkip>
+    </JSLintSkip>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebActivator">
+      <HintPath>..\..\..\packages\WebActivator.1.1.0.0\lib\NETFramework40\WebActivator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InterfacesUC\IDetalleAsignaturaRules.cs" />
+    <Compile Include="InterfacesUC\INotaSuperiorRules.cs" />
+    <Compile Include="InterfacesUC\IClaustroDocenteRules.cs" />
+    <Compile Include="InterfacesUC\INotaInicialRules.cs" />
+    <Compile Include="InterfacesUC\IAsignacionPlanEstudioSuperiorRules.cs" />
+    <Compile Include="InterfacesUC\ICronogramaEscolarRules.cs" />
+    <Compile Include="InterfacesUC\IActividadEspecialRules.cs" />
+    <Compile Include="InterfacesUC\ICondicionIvaRules.cs" />
+    <Compile Include="InterfacesUC\IInasistenciaDocenteRules.cs" />
+    <Compile Include="InterfacesUC\INotaPrimarioMedioRules.cs" />
+    <Compile Include="InterfacesUC\ISistemaNotaRules.cs" />
+    <Compile Include="InterfacesUC\IRetrasoAgenteRules.cs" />
+    <Compile Include="InterfacesUC\ISuspensionActividadRules.cs" />
+    <Compile Include="InterfacesUC\IAccidenteLaboralRules.cs" />
+    <Compile Include="InterfacesUC\IAsistenciaRules.cs" />
+    <Compile Include="InterfacesUC\IAgrupamientoCargoRules.cs" />
+    <Compile Include="InterfacesUC\ICondicionEspecialInasistenciaRules.cs" />
+    <Compile Include="InterfacesUC\IEmpresaExternaRules.cs" />
+    <Compile Include="InterfacesUC\IMotivoIncorporacionRules.cs" />
+    <Compile Include="InterfacesUC\IOperacionPredioRules.cs" />
+    <Compile Include="InterfacesUC\IPrevisionAusenciaRules.cs" />
+    <Compile Include="InterfacesUC\IProcesoRules.cs" />
+    <Compile Include="InterfacesUC\IReincorporacionRules.cs" />
+    <Compile Include="InterfacesUC\IVinculoFamiliarRules.cs" />
+    <Compile Include="InterfacesUC\ICalificacionRules.cs" />
+    <Compile Include="InterfacesUC\IDocumentoRequeridoRules.cs" />
+    <Compile Include="InterfacesUC\IDocumentoRules.cs" />
+    <Compile Include="InterfacesUC\IEstudianteRules.cs" />
+    <Compile Include="InterfacesUC\ICalendarioRules.cs" />
+    <Compile Include="InterfacesUC\IGrupoMabRules.cs" />
+    <Compile Include="InterfacesUC\ICodigoMovimientoMabRules.cs" />
+    <Compile Include="InterfacesUC\IHistorialDocumentoRules.cs" />
+    <Compile Include="InterfacesUC\IInasistenciaRules.cs" />
+    <Compile Include="InterfacesUC\IPlantaFuncionalRules.cs" />
+    <Compile Include="InterfacesUC\ISancionRules.cs" />
+    <Compile Include="InterfacesUC\IAsignacionRules.cs" />
+    <Compile Include="InterfacesUC\IBecaRules.cs" />
+    <Compile Include="InterfacesUC\ICorrelatividadRules.cs" />
+    <Compile Include="InterfacesUC\IDivisionEdificioRules.cs" />
+    <Compile Include="InterfacesUC\ICodigoAsignaturaRules.cs" />
+    <Compile Include="InterfacesUC\IAsignaturaRules.cs" />
+    <Compile Include="InterfacesUC\IEspecialidadRules.cs" />
+    <Compile Include="InterfacesUC\IHorarioPuestoDeTrabajoRules.cs" />
+    <Compile Include="InterfacesUC\IMabRules.cs" />
+    <Compile Include="InterfacesUC\IMatriculaRules.cs" />
+    <Compile Include="InterfacesUC\INivelCargoRules.cs" />
+    <Compile Include="InterfacesUC\INivelEducativoRules.cs" />
+    <Compile Include="InterfacesUC\ISolicitudPTRules.cs" />
+    <Compile Include="InterfacesUC\ITipoCargoRules.cs" />
+    <Compile Include="InterfacesUC\ITipoInstrumentoLegalRules.cs" />
+    <Compile Include="InterfacesUC\IUnionPredioRules.cs" />
+    <Compile Include="InterfacesUC\ISubOrientacionRules.cs" />
+    <Compile Include="InterfacesUC\IOrientacionRules.cs" />
+    <Compile Include="InterfacesUC\ITramiteAdquisicionRules.cs" />
+    <Compile Include="InterfacesUC\IDetalleSeccionRules.cs" />
+    <Compile Include="InterfacesUC\ISeccionRules.cs" />
+    <Compile Include="InterfacesUC\ISubGrupoRules.cs" />
+    <Compile Include="InterfacesUC\IGrupoRules.cs" />
+    <Compile Include="InterfacesUC\IPersonaJuridicaRules.cs" />
+    <Compile Include="InterfacesUC\ITituloRules.cs" />
+    <Compile Include="InterfacesUC\IPuestoDeTrabajoRules.cs" />
+    <Compile Include="InterfacesUC\IUnionEdificioRules.cs" />
+    <Compile Include="InterfacesUC\ITurnoRules.cs" />
+    <Compile Include="InterfacesUC\IParametroRules.cs" />
+    <Compile Include="InterfacesUC\IItemStockRules.cs" />
+    <Compile Include="InterfacesUC\IPersonaFisicaRules.cs" />
+    <Compile Include="InterfacesUC\IDepositoRules.cs" />
+    <Compile Include="InterfacesUC\IPruebaTipoAdquisicionRules.cs" />
+    <Compile Include="InterfacesUC\IGradoAñoRules.cs" />
+    <Compile Include="InterfacesUC\ILocalidadRules.cs" />
+    <Compile Include="InterfacesUC\IDetalleHoraTurnoRules.cs" />
+    <Compile Include="InterfacesUC\IAsignacionInstrumentoLegalRules.cs" />
+    <Compile Include="InterfacesUC\IDomicilioRules.cs" />
+    <Compile Include="InterfacesUC\IOrdenDePagoRules.cs" />
+    <Compile Include="InterfacesUC\IProgramaPresupuestarioRules.cs" />
+    <Compile Include="InterfacesUC\ITipoMovimientoInstrumentoLegalRules.cs" />
+    <Compile Include="InterfacesUC\IAgenteRules.cs" />
+    <Compile Include="InterfacesUC\IAsignacionPlanEstudioRules.cs" />
+    <Compile Include="InterfacesUC\ICicloEducativoRules.cs" />
+    <Compile Include="InterfacesUC\IDesdoblamientoDivisionRules.cs" />
+    <Compile Include="InterfacesUC\IDetalleHorarioRules.cs" />
+    <Compile Include="InterfacesUC\IDireccionDeNivelRules.cs" />
+    <Compile Include="InterfacesUC\IInscripcionRules.cs" />
+    <Compile Include="InterfacesUC\IActividadDefinicionInstitucionalRules.cs" />
+    <Compile Include="InterfacesUC\ITipoAdquisicionRules.cs" />
+    <Compile Include="InterfacesUC\IUnidadAcademicaRules.cs" />
+    <Compile Include="InterfacesUC\IEscuelaPlanRules.cs" />
+    <Compile Include="InterfacesUC\ICicloLectivoRules.cs" />
+    <Compile Include="InterfacesUC\IDiagramacionCursoRules.cs" />
+    <Compile Include="InterfacesUC\IPlanEstudioRules.cs" />
+    <Compile Include="InterfacesUC\ICasaHabitacionRules.cs" />
+    <Compile Include="InterfacesUC\ICargoMinimoRules.cs" />
+    <Compile Include="InterfacesUC\ICarreraRules.cs" />
+    <Compile Include="InterfacesUC\IConfiguracionTurnoRules.cs" />
+    <Compile Include="InterfacesUC\IContratoRules.cs" />
+    <Compile Include="InterfacesUC\IDivisionRules.cs" />
+    <Compile Include="InterfacesUC\IEdificioRules.cs" />
+    <Compile Include="InterfacesUC\IEmpresaRules.cs" />
+    <Compile Include="InterfacesUC\IEntidadesGeneralesRules.cs" />
+    <Compile Include="InterfacesUC\IExpedienteRules.cs" />
+    <Compile Include="InterfacesUC\IFuncionEdificioRules.cs" />
+    <Compile Include="InterfacesUC\IInstrumentoLegalRules.cs" />
+    <Compile Include="InterfacesUC\ILocalRules.cs" />
+    <Compile Include="InterfacesUC\IParcelaRules.cs" />
+    <Compile Include="InterfacesUC\IPlantaRules.cs" />
+    <Compile Include="InterfacesUC\IPredioRules.cs" />
+    <Compile Include="InterfacesUC\ITipoEmpresaRules.cs" />
+    <Compile Include="InterfacesUC\ITipoEstructuraEdiliciaRules.cs" />
+    <Compile Include="InterfacesUC\ITipoInspeccionIntermediaRules.cs" />
+    <Compile Include="InterfacesUC\ITipoLocalRules.cs" />
+    <Compile Include="InterfacesUC\IOperacionEdificioRules.cs" />
+    <Compile Include="InterfacesUC\ITipoOperacionPredioRules.cs" />
+    <Compile Include="InterfacesUC\IUsuarioRules.cs" />
+    <Compile Include="InterfacesUC\IVinculoEmpresaEdificioRules.cs" />
+    <Compile Include="Models\AccidenteLaboralConsultaModel.cs" />
+    <Compile Include="Models\AccidenteLaboralModel.cs" />
+    <Compile Include="Models\ActivacionCodigoEmpresaModel.cs" />
+    <Compile Include="Models\ActividadEspecialModel.cs" />
+    <Compile Include="Models\AgenteConsultaModel.cs" />
+    <Compile Include="Models\AgenteModel.cs" />
+    <Compile Include="Models\AgrupamientoCargoModel.cs" />
+    <Compile Include="Models\AjaxAbmcImprimirModel.cs" />
+    <Compile Include="Models\AsignacionConsultaModel.cs" />
+    <Compile Include="Models\AsignacionInspeccionEscuelaModel.cs" />
+    <Compile Include="Models\AsignacionInstrumentoLegalModel.cs" />
+    <Compile Include="Models\AsignacionPlanEstudioModel.cs" />
+    <Compile Include="Models\AsignaturaEscuelaModel.cs" />
+    <Compile Include="Models\AsignaturaModel.cs" />
+    <Compile Include="Models\AtributoModel.cs" />
+    <Compile Include="Models\AusenciaCortaModel.cs" />
+    <Compile Include="Models\AvanceConstruccionModel.cs" />
+    <Compile Include="Models\BecaModel.cs" />
+    <Compile Include="Models\CalendarioEscolarModel.cs" />
+    <Compile Include="Models\CalendarioModel.cs" />
+    <Compile Include="Models\CallesPredioNombresModel.cs" />
+    <Compile Include="Models\CargoMinimoModel.cs" />
+    <Compile Include="Models\CasaHabitacionModel.cs" />
+    <Compile Include="Models\CicloEducativoModel.cs" />
+    <Compile Include="Models\CicloLectivoModel.cs" />
+    <Compile Include="Models\AsignacionCarreraModel.cs" />
+    <Compile Include="Models\CarreraModel.cs" />
+    <Compile Include="Models\ArticuloResolucionModel.cs" />
+    <Compile Include="Models\CodigoGeneradoModel.cs" />
+    <Compile Include="Models\AsignacionPlanEstudioSuperiorModel.cs" />
+    <Compile Include="Models\ComboModel.cs" />
+    <Compile Include="Models\ClaustroDocenteModel.cs" />
+    <Compile Include="Models\ClaustroDocenteConsultaModel.cs" />
+    <Compile Include="Models\GestionAsignacionPorMabModel.cs" />
+    <Compile Include="Models\NotaSuperiorModel.cs" />
+    <Compile Include="Models\DocentesYAsignaturasAsignadasModel.cs" />
+    <Compile Include="Models\PlanMostrarModel.cs" />
+    <Compile Include="Models\DtoPrevisionAusenciaDatosModel.cs" />
+    <Compile Include="Models\DtoPrevisionAusenciaModel.cs" />
+    <Compile Include="Models\EmpresaInspeccionadaPorInspeccionModel.cs" />
+    <Compile Include="Models\NotaInicialModel.cs" />
+    <Compile Include="Models\HistorialAdeudadasConsultaModel.cs" />
+    <Compile Include="Models\DtoActividadEspecialModel.cs" />
+    <Compile Include="Models\DtoEmpresaExternaConsultaModel.cs" />
+    <Compile Include="Models\FechaYUsuarioCierreEmpresaModel.cs" />
+    <Compile Include="Models\EtapaNivelModel.cs" />
+    <Compile Include="Models\GrupoSubGrupoAsignaturaModel.cs" />
+    <Compile Include="Models\EscuelaPlanMostrarModel.cs" />
+    <Compile Include="Models\InscripcionConsultaModel.cs" />
+    <Compile Include="Models\PersonalPorTurnoModel.cs" />
+    <Compile Include="Models\PredioCallesModel.cs" />
+    <Compile Include="Models\CodigoMovimientoMabModel.cs" />
+    <Compile Include="Models\ComunicacionModel.cs" />
+    <Compile Include="Models\CondicionEspecialInasistenciaModel.cs" />
+    <Compile Include="Models\CondicionIvaModel.cs" />
+    <Compile Include="Models\ConfiguracionAsigEspecialModel.cs" />
+    <Compile Include="Models\ConsultarSolicitudesDesactivacionEmpresasModel.cs" />
+    <Compile Include="Models\ContratoConsultaModel.cs" />
+    <Compile Include="Models\ContratoConsultaAvanzadaModel.cs" />
+    <Compile Include="Models\AsignacionModel.cs" />
+    <Compile Include="Models\CodigoAsignaturaModel.cs" />
+    <Compile Include="Models\CalleModel.cs" />
+    <Compile Include="Models\ConsultarAsignaturaModel.cs" />
+    <Compile Include="Models\AsignaturaRegistrarModel.cs" />
+    <Compile Include="Models\BarrioModel.cs" />
+    <Compile Include="Models\ConsultarHorarioPuestoDeTrabajoModel.cs" />
+    <Compile Include="Models\AsignacionInstrumentoLegalConsultaModel.cs" />
+    <Compile Include="Models\CalleConsultaModel.cs" />
+    <Compile Include="Models\AsignaturaEspecialModel.cs" />
+    <Compile Include="Models\CronogramaEscolarModel.cs" />
+    <Compile Include="Models\PrevisionAusenciaParaInasistenciaModel.cs" />
+    <Compile Include="Models\PuestoDeTrabajoDetalleModel.cs" />
+    <Compile Include="Models\TipoEmpresaModelModel.cs" />
+    <Compile Include="Models\UnidadEspecialModel.cs" />
+    <Compile Include="Models\InscripcionNotasModel.cs" />
+    <Compile Include="Models\NotaPrimarioMedioModel.cs" />
+    <Compile Include="Models\InscripcionSuperiorConsultaModel.cs" />
+    <Compile Include="Models\InscripcionDivisionesConsultaModel.cs" />
+    <Compile Include="Models\PuestoDeTrabajoProvisorioVerModel.cs" />
+    <Compile Include="Models\SancionMostrarModel.cs" />
+    <Compile Include="Models\SemestreModel.cs" />
+    <Compile Include="Models\SistemaAsignaturaModel.cs" />
+    <Compile Include="Models\DetalleTipoNotaModel.cs" />
+    <Compile Include="Models\DetalleValorModel.cs" />
+    <Compile Include="Models\InscripcionSuperiorModel.cs" />
+    <Compile Include="Models\InscripcionLibroFolioConsultaModel.cs" />
+    <Compile Include="Models\InscripcionLibroFolioModel.cs" />
+    <Compile Include="Models\DatosDniAgenteModel.cs" />
+    <Compile Include="Models\HistorialAccidenteLaboralModel.cs" />
+    <Compile Include="Models\InasistenciaDocenteModel.cs" />
+    <Compile Include="Models\InasistenciaDocenteConsultaModel.cs" />
+    <Compile Include="Models\InasistenciaRegistrarModel.cs" />
+    <Compile Include="Models\MotivoIncorporacionModel.cs" />
+    <Compile Include="Models\MotivoRetrasoAgenteModel.cs" />
+    <Compile Include="Models\ObligacionModel.cs" />
+    <Compile Include="Models\ParoAgenteAcatamientoModel.cs" />
+    <Compile Include="Models\PedidoLicenciaModel.cs" />
+    <Compile Include="Models\PersonaFisicaConsultaModel.cs" />
+    <Compile Include="Models\PlanConsultaModel.cs" />
+    <Compile Include="Models\EscuelaConsultaModel.cs" />
+    <Compile Include="Models\EscuelaPlanConsultaModel.cs" />
+    <Compile Include="Models\PlantaFuncionalMovimientosModel.cs" />
+    <Compile Include="Models\PrevisionAusenciaRegistrarModel.cs" />
+    <Compile Include="Models\PuestoDeTrabajoConsultaModel.cs" />
+    <Compile Include="Models\PuestoDeTrabajoProvisorioModel.cs" />
+    <Compile Include="Models\RetrasoAgenteConsultaModel.cs" />
+    <Compile Include="Models\RetrasoAgenteModel.cs" />
+    <Compile Include="Models\SistemaNotaModel.cs" />
+    <Compile Include="Models\SistemaNotaSeleccionGrupoModel.cs" />
+    <Compile Include="Models\SuspensionActividadModel.cs" />
+    <Compile Include="Models\ReincorporacionModel.cs" />
+    <Compile Include="Models\ReincorporacionRegistrarModel.cs" />
+    <Compile Include="Models\PrevisionAusenciaModel.cs" />
+    <Compile Include="Models\TipoVinculoModel.cs" />
+    <Compile Include="Models\EmpresaConsultaEdificioModel.cs" />
+    <Compile Include="Models\EstudianteConsultaModel.cs" />
+    <Compile Include="Models\HistorialAcademicoRegistrarModel.cs" />
+    <Compile Include="Models\PreinscripcionModel.cs" />
+    <Compile Include="Models\InscripcionRegistrarModel.cs" />
+    <Compile Include="Models\MatriculaModel.cs" />
+    <Compile Include="Models\DomicilioConsultaPredioModel.cs" />
+    <Compile Include="Models\LocalidadConsultaModel.cs" />
+    <Compile Include="Models\PersonaFisicaConsultaHogarModel.cs" />
+    <Compile Include="Models\DocumentoRegistraModel.cs" />
+    <Compile Include="Models\GrupoMabModel.cs" />
+    <Compile Include="Models\HistorialAcademicoModel.cs" />
+    <Compile Include="Models\NotaModel.cs" />
+    <Compile Include="Models\DenominacionTipoAgenteModel.cs" />
+    <Compile Include="Models\DetalleInasistenciaModel.cs" />
+    <Compile Include="Models\DiagramacionCursoRegistrarModel.cs" />
+    <Compile Include="Models\DocumentoModel.cs" />
+    <Compile Include="Models\DocumentoRequeridoModel.cs" />
+    <Compile Include="Models\EstatutoModel.cs" />
+    <Compile Include="Models\HistorialAgrupamientoModel.cs" />
+    <Compile Include="Models\HistorialDocumentoModel.cs" />
+    <Compile Include="Models\HorarioPuestoDeTrabajoModel.cs" />
+    <Compile Include="Models\InasistenciaModel.cs" />
+    <Compile Include="Models\InscripcionSeleccionModel.cs" />
+    <Compile Include="Models\EdificioDivisionModel.cs" />
+    <Compile Include="Models\EstadoCivilModel.cs" />
+    <Compile Include="Models\EstadoPuestoModel.cs" />
+    <Compile Include="Models\HistorialCasaHabitacionModel.cs" />
+    <Compile Include="Models\HistorialEmpresaModel.cs" />
+    <Compile Include="Models\HistorialEscuelaModel.cs" />
+    <Compile Include="Models\HistorialesEmpresaModel.cs" />
+    <Compile Include="Models\HistorialLocalModel.cs" />
+    <Compile Include="Models\HistorialNivelCargoModel.cs" />
+    <Compile Include="Models\ModalidadMabModel.cs" />
+    <Compile Include="Models\MotivoBajaAgenteModel.cs" />
+    <Compile Include="Models\MotivoBajaSancionModel.cs" />
+    <Compile Include="Models\MotivoSancionModel.cs" />
+    <Compile Include="Models\NivelCargoModel.cs" />
+    <Compile Include="Models\OrganismoEmisorDocumentoModel.cs" />
+    <Compile Include="Models\PaqueteNoPresupuestadoModel.cs" />
+    <Compile Include="Models\PaquetePresupuestadoEmpresaModel.cs" />
+    <Compile Include="Models\MabModel.cs" />
+    <Compile Include="Models\PlanEstudioConsultaModel.cs" />
+    <Compile Include="Models\PlantaConsultaModel.cs" />
+    <Compile Include="Models\PlantaExternaModel.cs" />
+    <Compile Include="Models\PlantaFuncionalResumenModel.cs" />
+    <Compile Include="Models\PlantaNoPresupLiquidadaModel.cs" />
+    <Compile Include="Models\PlantaPresupAsignadaModel.cs" />
+    <Compile Include="Models\PlantaProvisoriaNoVinculadaModel.cs" />
+    <Compile Include="Models\PlantaProvisoriaVinculadaModel.cs" />
+    <Compile Include="Models\ProcesoModel.cs" />
+    <Compile Include="Models\PuestoDeTrabajoExternoModel.cs" />
+    <Compile Include="Models\SancionModel.cs" />
+    <Compile Include="Models\SexoModel.cs" />
+    <Compile Include="Models\SituacionDeRevistaModel.cs" />
+    <Compile Include="Models\SolicitudPTConsultaModel.cs" />
+    <Compile Include="Models\SolicitudPTModel.cs" />
+    <Compile Include="Models\SolicitudPTVerModel.cs" />
+    <Compile Include="Models\TipoAdquisicionModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\TipoAgenteModel.cs" />
+    <Compile Include="Models\TipoCalleModel.cs" />
+    <Compile Include="Models\TipoCargoEspecialModel.cs" />
+    <Compile Include="Models\TipoDocumentoModel.cs" />
+    <Compile Include="Models\TipoDomicilioModel.cs" />
+    <Compile Include="Models\RegistrarVinculoEmpresaEdificioModel.cs" />
+    <Compile Include="Models\TipoInspeccionIntermediaComboModel.cs" />
+    <Compile Include="Models\TipoJornadaModel.cs" />
+    <Compile Include="Models\TipoNotaModel.cs" />
+    <Compile Include="Models\TipoNovedadModel.cs" />
+    <Compile Include="Models\TipoPuestoModel.cs" />
+    <Compile Include="Models\EmpresaVisadoCierreModel.cs" />
+    <Compile Include="Models\EstadoAsignacionModel.cs" />
+    <Compile Include="Models\SubOrientacionModel.cs" />
+    <Compile Include="Models\OrientacionModel.cs" />
+    <Compile Include="Models\DetalleSeccionModel.cs" />
+    <Compile Include="Models\ModificarAsignacionEscuelasAInspeccionModel.cs" />
+    <Compile Include="Models\PedidoAutorizacionCierreModel.cs" />
+    <Compile Include="Models\SeccionModel.cs" />
+    <Compile Include="Models\ModalidadJornadaModel.cs" />
+    <Compile Include="Models\PredioConsultaModel.cs" />
+    <Compile Include="Models\EspecialidadModel.cs" />
+    <Compile Include="Models\TipoEscuelaModel.cs" />
+    <Compile Include="Models\TipoInstrumentoLegalModel.cs" />
+    <Compile Include="Models\TipoSancionModel.cs" />
+    <Compile Include="Models\TituloAgenteModel.cs" />
+    <Compile Include="Models\TituloModel.cs" />
+    <Compile Include="Models\DesdoblamientoModel.cs" />
+    <Compile Include="Models\EntidadBancariaModel.cs" />
+    <Compile Include="Models\GrupoModel.cs" />
+    <Compile Include="Models\RolPorUsuarioModel.cs" />
+    <Compile Include="Models\ParametroModel.cs" />
+    <Compile Include="Models\EscuelaModificarTipoEmpresaModel.cs" />
+    <Compile Include="Models\ItemStockModel.cs" />
+    <Compile Include="Models\PruebaTipoAdquisicionModel.cs" />
+    <Compile Include="Models\DomicilioEdificioModel.cs" />
+    <Compile Include="Models\HorarioModel.cs" />
+    <Compile Include="Models\PuestoDeTrabajoModel.cs" />
+    <Compile Include="Models\PersonaJuridicaModel.cs" />
+    <Compile Include="Models\DetalleAsignaturaModel.cs" />
+    <Compile Include="Models\DetalleSubGrupoModel.cs" />
+    <Compile Include="Models\GradoAñoModel.cs" />
+    <Compile Include="Models\GrupoOpcionalModel.cs" />
+    <Compile Include="Models\DesdoblamientoDivisionModel.cs" />
+    <Compile Include="Models\DireccionDeNivelComboModel.cs" />
+    <Compile Include="Models\EmpresaCierreModel.cs" />
+    <Compile Include="Models\ConfiguracionTurnoModel.cs" />
+    <Compile Include="Models\ActividadDefinicionInstitucionalModel.cs" />
+    <Compile Include="Models\DetalleHorarioModel.cs" />
+    <Compile Include="Models\EdificioConsultarModel.cs" />
+    <Compile Include="Models\EmpresaReactivacionModel.cs" />
+    <Compile Include="Models\EmpresaVisarModel.cs" />
+    <Compile Include="Models\EquivalenciaModel.cs" />
+    <Compile Include="Models\HistorialCargoMinimoModel.cs" />
+    <Compile Include="Models\LocalConsultaModel.cs" />
+    <Compile Include="Models\NivelEducativoModel.cs" />
+    <Compile Include="Models\PeriodoLectivoModel.cs" />
+    <Compile Include="Models\NivelEducativoPorTipoEducacionModel.cs" />
+    <Compile Include="Models\ObraSocialModel.cs" />
+    <Compile Include="Models\SubGrupoModel.cs" />
+    <Compile Include="Models\TipoMovimientoInstrumentoLegalModel.cs" />
+    <Compile Include="Models\ResolucionModel.cs" />
+    <Compile Include="Models\TurnoModel.cs" />
+    <Compile Include="Models\UnidadAcademicaModel.cs" />
+    <Compile Include="Models\EscuelaPlanModel.cs" />
+    <Compile Include="Models\EmpresaConsultarModel.cs" />
+    <Compile Include="Models\ContratoModel.cs" />
+    <Compile Include="Models\CorrelatividadModel.cs" />
+    <Compile Include="Models\DepartamentoProvincialModel.cs" />
+    <Compile Include="Models\DepositoModel.cs" />
+    <Compile Include="Models\DetalleHoraTurnoModel.cs" />
+    <Compile Include="Models\DiagramacionCursoModel.cs" />
+    <Compile Include="Models\DireccionDeNivelModel.cs" />
+    <Compile Include="Models\DomicilioModel.cs" />
+    <Compile Include="Models\EdificioModel.cs" />
+    <Compile Include="Models\EmpresaExternaModel.cs" />
+    <Compile Include="Models\EmpresaModel.cs" />
+    <Compile Include="Models\EmpresaRegistrarModel.cs" />
+    <Compile Include="Models\EscuelaModel.cs" />
+    <Compile Include="Models\EscuelaPrivadaModel.cs" />
+    <Compile Include="Models\EstudianteModel.cs" />
+    <Compile Include="Models\ExpedienteModel.cs" />
+    <Compile Include="Models\FuncionEdificioModel.cs" />
+    <Compile Include="Models\HistorialDireccionDeNivelModel.cs" />
+    <Compile Include="Models\HistorialEdificioModel.cs" />
+    <Compile Include="Models\HistorialEstadoCasaHabitacionModel.cs" />
+    <Compile Include="Models\HistorialEstadoEdificioModel.cs" />
+    <Compile Include="Models\HistorialEstadoEmpresaModel.cs" />
+    <Compile Include="Models\HistorialEstadoServicioEntidadModel.cs" />
+    <Compile Include="Models\HistorialInspeccionModel.cs" />
+    <Compile Include="Models\HistorialPredioModel.cs" />
+    <Compile Include="Models\InscripcionModel.cs" />
+    <Compile Include="Models\InspeccionModel.cs" />
+    <Compile Include="Models\InstrumentoLegalModel.cs" />
+    <Compile Include="Models\LocalidadModel.cs" />
+    <Compile Include="Models\LocalModel.cs" />
+    <Compile Include="Models\OrdenDePagoModel.cs" />
+    <Compile Include="Models\PaisModel.cs" />
+    <Compile Include="Models\ParcelaModel.cs" />
+    <Compile Include="Models\PersonaFisicaModel.cs" />
+    <Compile Include="Models\PlanEstudioModel.cs" />
+    <Compile Include="Models\PlanoModel.cs" />
+    <Compile Include="Models\PlantaModel.cs" />
+    <Compile Include="Models\PredioModel.cs" />
+    <Compile Include="Models\ProgramaPresupuestarioModel.cs" />
+    <Compile Include="Models\ProvinciaModel.cs" />
+    <Compile Include="Models\ServicioConfiguradoModel.cs" />
+    <Compile Include="Models\ServicioEntidadModel.cs" />
+    <Compile Include="Models\ServicioModel.cs" />
+    <Compile Include="Models\SucursalBancariaModel.cs" />
+    <Compile Include="Models\TipoCargoModel.cs" />
+    <Compile Include="Models\TipoEntidadModel.cs" />
+    <Compile Include="Models\TipoEstructuraEdiliciaModel.cs" />
+    <Compile Include="Models\TipoInspeccionIntermediaModel.cs" />
+    <Compile Include="Models\TipoLocalModel.cs" />
+    <Compile Include="Models\OperacionEdificioModel.cs" />
+    <Compile Include="Models\OperacionPredioModel.cs" />
+    <Compile Include="Models\TramiteAdquisicionModel.cs" />
+    <Compile Include="Models\UnionPrediosModel.cs" />
+    <Compile Include="Models\UsuarioModel.cs" />
+    <Compile Include="Models\UsuarioRegistrarModel.cs" />
+    <Compile Include="Models\ValorParametro.cs" />
+    <Compile Include="Models\ValorPorAtributoModel.cs" />
+    <Compile Include="Models\VinculoEmpresaEdificioModel.cs" />
+    <Compile Include="Models\VinculoEmpresaEdificioReactivacionEmpModel.cs" />
+    <Compile Include="Models\VinculoFamiliarModel.cs" />
+    <Compile Include="Models\ZonaDesfavorableModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Util\ValidationAttributes\ValidationAttributes.csproj">
+      <Project>{17FEA4D0-1CE6-4DE7-93A2-A7054E60EF6B}</Project>
+      <Name>ValidationAttributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Siage.Base\Siage.Base.csproj">
+      <Project>{2480EC80-6DEC-40A8-ACC4-3F7949B9A678}</Project>
+      <Name>Siage.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Siage.Core\Siage.Core.csproj">
+      <Project>{10B6B7FB-A774-4CBC-9F27-E0E34485DC3A}</Project>
+      <Name>Siage.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

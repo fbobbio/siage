@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EDIFICIO_ID_NO_EXISTENTE" xml:space="preserve">
+    <value>No existe un edificio con id={0}</value>
+  </data>
+  <data name="CASA_HABITACION_ASOCIADA" xml:space="preserve">
+    <value>El edificio no puede ser eliminado porque tiene una casa habitación asociada.</value>
+  </data>
+  <data name="LOCALES_CASA_HABITACION" xml:space="preserve">
+    <value>Cuando la función del edificio es "Casa habitación"  todos los locales asociados al mismo también deben ser "Casa Habitación".</value>
+  </data>
+  <data name="PLANTA_SIN_LOCALES" xml:space="preserve">
+    <value>Debe registrar al menos un local por planta. Las siguientes plantas no tienen locales asociados.</value>
+  </data>
+  <data name="SIN_ALTITUD" xml:space="preserve">
+    <value>Debe ingresar la altitud del edificio.</value>
+  </data>
+  <data name="SIN_ALTURA" xml:space="preserve">
+    <value>Debe ingresar la altura del edificio.</value>
+  </data>
+  <data name="SIN_CASA_HABITACION_EDIFICIO" xml:space="preserve">
+    <value>Cuando la función del edificio es "Casa habitación" debe registrar los datos de la misma.</value>
+  </data>
+  <data name="SIN_CASA_HABITACION_LOCAL" xml:space="preserve">
+    <value>Cuando alguno de los locales asociados al edificio es "Casa habitación" se deben registrar los datos de la misma.</value>
+  </data>
+  <data name="SIN_DOMICILIO" xml:space="preserve">
+    <value>Debe seleccionar el domicilio del edificio.</value>
+  </data>
+  <data name="SIN_ESTADO" xml:space="preserve">
+    <value>Debe seleccionar el estado del edificio.</value>
+  </data>
+  <data name="SIN_ESTRUCTURA_EDIFILICIA" xml:space="preserve">
+    <value>Debe seleccionar el tipo de estructura edilicia del edificio.</value>
+  </data>
+  <data name="SIN_FUNCION_EDIFICIO" xml:space="preserve">
+    <value>Debe seleccionar la función del edifcio.</value>
+  </data>
+  <data name="SIN_LATITUD" xml:space="preserve">
+    <value>Debe ingresar la latituda del edificio.</value>
+  </data>
+  <data name="SIN_LOCAL_CASA_HABITACION" xml:space="preserve">
+    <value>Al menos un local del Edificio debe ser casa habitación.</value>
+  </data>
+  <data name="SIN_LONGITUD" xml:space="preserve">
+    <value>Debe ingresar la longitud del edificio.</value>
+  </data>
+  <data name="SIN_MOTIVO_DE_BAJA" xml:space="preserve">
+    <value>Debe seleccionar un motivo de baja.</value>
+  </data>
+  <data name="SIN_OBSERVACIONES" xml:space="preserve">
+    <value>Debe ingresar una observación.</value>
+  </data>
+  <data name="SIN_PLANOS" xml:space="preserve">
+    <value>Debe adjuntar los archivos correspondientes a los planos del edificio.</value>
+  </data>
+  <data name="SIN_PREDIO_SELECCIONADO" xml:space="preserve">
+    <value>Debe seleccionar un predio para registrar el edificio.</value>
+  </data>
+  <data name="SIN_REFERENCIA" xml:space="preserve">
+    <value>Debe ingresar la referencia del edificio</value>
+  </data>
+  <data name="SIN_SUPERFICIE" xml:space="preserve">
+    <value>Debe ingresar la superficie del edificio.</value>
+  </data>
+  <data name="TIENE_EMPRESA_ASOCIADA" xml:space="preserve">
+    <value>El edificio no puede ser eliminado porque tiene una empresa vinculada.</value>
+  </data>
+  <data name="TIPO_ADQUISICION_ASOCIADA" xml:space="preserve">
+    <value>El edificio no puede ser eliminado porque tiene un tipo de adquisición alquiler o comodato.</value>
+  </data>
+  <data name="EDIFICIO_SIN_PLANTAS" xml:space="preserve">
+    <value>El edificio debe tener al menos una planta.</value>
+  </data>
+  <data name="PLANTA_SIN_LOCAL" xml:space="preserve">
+    <value>Debe registrar al menos un local por planta. La siguiente planta no tiene local asociado.</value>
+  </data>
+  <data name="FECHA_ADQUISICION" xml:space="preserve">
+    <value>Debe ingresar una fecha de adquisición menor a la fecha actual.</value>
+  </data>
+  <data name="CASA_HABITACION" xml:space="preserve">
+    <value>Debe completar los datos de la casa habitación asociada.</value>
+  </data>
+  <data name="FECHA_ADQUISICION_INVALIDA" xml:space="preserve">
+    <value>El valor ingresado en fecha de adquisición es invalido.</value>
+  </data>
+  <data name="SIN_TIPO_ADQUISICION" xml:space="preserve">
+    <value>Debe ingresar un tipo de adquisición.</value>
+  </data>
+  <data name="SIN_LOCAL_CASA_HABITACION_EDICION" xml:space="preserve">
+    <value>El edificio tiene asociado una casa habitación, al menos un local debe ser casa habitación. Para dar de baja la casa habitación asociada, debe hacerlo desde la opción del menú: Gestionar Casa Habitación.</value>
+  </data>
+</root>

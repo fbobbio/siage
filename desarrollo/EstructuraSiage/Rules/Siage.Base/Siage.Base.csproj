@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2480EC80-6DEC-40A8-ACC4-3F7949B9A678}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Siage.Base</RootNamespace>
+    <AssemblyName>Siage.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseException.cs" />
+    <Compile Include="Dto\DtoEscuelaAnexoReporte.cs" />
+    <Compile Include="Dto\DtoConsultaEscuela.cs" />
+    <Compile Include="Dto\DtoConsultaGradoAnio.cs" />
+    <Compile Include="Dto\DtoConsultaNivelEducativo.cs" />
+    <Compile Include="Dto\DtoClaustroDocenteConsulta.cs" />
+    <Compile Include="Dto\DtoEscuelaReporte.cs" />
+    <Compile Include="Dto\DtoDocentesYAsignaturasAsignadas.cs" />
+    <Compile Include="Dto\DtoEmpresaInspeccionadaPorInspeccion.cs" />
+    <Compile Include="Dto\DtoGestionAsignacionPorMab.cs" />
+    <Compile Include="Dto\DtoPrevisionAusenciaParaInasistencia.cs" />
+    <Compile Include="Dto\DtoPrevisionAusenciaVistaNM.cs" />
+    <Compile Include="Dto\DtoPrevisionAusenciaVistaNS.cs" />
+    <Compile Include="Dto\DtoPlanConsulta.cs" />
+    <Compile Include="Dto\DtoFuncionEdificioReporte.cs" />
+    <Compile Include="Dto\DtoParcelaReporte.cs" />
+    <Compile Include="Dto\DtoPrevicionAusencia.cs" />
+    <Compile Include="Dto\DtoPrevisionAusenciaDatos.cs" />
+    <Compile Include="Dto\DtoEdificioReporte.cs" />
+    <Compile Include="Dto\DtoPrevisionAusenciaVistaNIYNP.cs" />
+    <Compile Include="Dto\DtoTipoAdquisicionReporte.cs" />
+    <Compile Include="Dto\DtoTipoEstructuraEdiliciaReporte.cs" />
+    <Compile Include="Dto\DtoVinculoEmpresaReporte.cs" />
+    <Compile Include="Dto\MetodosReporte.cs" />
+    <Compile Include="Dto\DtoPredioReporte.cs" />
+    <Compile Include="Dto\DtoActividadEspecial.cs" />
+    <Compile Include="Dto\DtoAmbitoEmpresa.cs" />
+    <Compile Include="Dto\DtoHistorialAcademicoRegistrar.cs" />
+    <Compile Include="Dto\DtoFechaYUsuarioCierreEmpresa.cs" />
+    <Compile Include="Dto\DtoGrupoSubGrupoAsignatura.cs" />
+    <Compile Include="Dto\DtoEscuelaPlan.cs" />
+    <Compile Include="Dto\DtoInscripcionConsulta.cs" />
+    <Compile Include="Dto\DtoCallesPredio.cs" />
+    <Compile Include="Dto\DtoAgenteCargo.cs" />
+    <Compile Include="Dto\DtoEstadoEmpresa.cs" />
+    <Compile Include="Dto\DtoCallesPredioNombres.cs" />
+    <Compile Include="Dto\DtoConsultaAccidenteLaboral.cs" />
+    <Compile Include="Dto\DtoConsultaAsignacion.cs" />
+    <Compile Include="Dto\DtoConsultaInasistenciaDocente.cs" />
+    <Compile Include="Dto\DtoContratoConsultaAvanzada.cs" />
+    <Compile Include="Dto\DtoDatosDniAgente.cs" />
+    <Compile Include="Dto\DtoEmpresaConsultaEdificio.cs" />
+    <Compile Include="Dto\DtoEmpresaExternaConsulta.cs" />
+    <Compile Include="Dto\DtoEstudianteConsulta.cs" />
+    <Compile Include="Dto\DtoInscripcionLibroFolioConsulta.cs" />
+    <Compile Include="Dto\DtoInscripcionDivisionesConsulta.cs" />
+    <Compile Include="Dto\DtoInscripcionSuperiorConsulta.cs" />
+    <Compile Include="Dto\DtoPersonalPorTurno.cs" />
+    <Compile Include="Dto\DtoPuestoDeTrabajoConsulta.cs" />
+    <Compile Include="Dto\DtoRetrasoAgente.cs" />
+    <Compile Include="Dto\DtoRolPorUsuario.cs" />
+    <Compile Include="Dto\DtoTipoEmpresa.cs" />
+    <Compile Include="Dto\DtoUsuario.cs" />
+    <Compile Include="Dto\EstudianteConsulta.cs" />
+    <Compile Include="Dto\DtoPuestoDeTrabajoControlConsulta.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="Encriptador.cs" />
+    <Compile Include="Enumeraciones.cs" />
+    <Compile Include="FechasUtil.cs" />
+    <Compile Include="JSONSerializationHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionUtil.cs" />
+    <Compile Include="Resources\ValidationMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioLogueadoMock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ValidationMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationMessages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Util\ValidationAttributes\ValidationAttributes.csproj">
+      <Project>{17FEA4D0-1CE6-4DE7-93A2-A7054E60EF6B}</Project>
+      <Name>ValidationAttributes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

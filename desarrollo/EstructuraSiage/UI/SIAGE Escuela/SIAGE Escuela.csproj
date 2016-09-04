@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68311AC1-0AD8-4E1A-9D70-3519DBC959A5}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIAGE_Escuela</RootNamespace>
+    <AssemblyName>SIAGE Escuela</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator.NinjectAdapter">
+      <HintPath>..\..\Lib\CommonServiceLocator.NinjectAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator.WindsorAdapter">
+      <HintPath>..\..\Lib\CommonServiceLocator.WindsorAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\..\Lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.2.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\NHibernate.Caches.SysCache.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Linq, Version=1.0.0.0, Culture=neutral, PublicKeyToken=444cf6a87fdab271, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\NHibernate.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="uNhAddIns.Adapters">
+      <HintPath>..\..\Lib\uNhAddIns.Adapters.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\UI Common\Content\AjaxAbmcEnum.cs">
+      <Link>Content\AjaxAbmcEnum.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\AgenteController.cs">
+      <Link>Controllers\AgenteController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\AjaxAbmcController.cs">
+      <Link>Controllers\AjaxAbmcController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\AjaxAbmcDetalleController.cs">
+      <Link>Controllers\AjaxAbmcDetalleController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\AjaxAbmcMixtoController.cs">
+      <Link>Controllers\AjaxAbmcMixtoController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\AsignacionInstrumentoLegalController.cs">
+      <Link>Controllers\AsignacionInstrumentoLegalController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\CalendarioController.cs">
+      <Link>Controllers\CalendarioController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\CalendarioEscolarController.cs">
+      <Link>Controllers\CalendarioEscolarController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\DomicilioController.cs">
+      <Link>Controllers\DomicilioController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\EmpresaExternaController.cs">
+      <Link>Controllers\EmpresaExternaController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\ErrorController.cs">
+      <Link>Controllers\ErrorController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\EstudianteController.cs">
+      <Link>Controllers\EstudianteController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\ExpedienteController.cs">
+      <Link>Controllers\ExpedienteController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\InscripcionController.cs">
+      <Link>Controllers\InscripcionController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\InstrumentoLegalController.cs">
+      <Link>Controllers\InstrumentoLegalController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\PersonaFisicaController.cs">
+      <Link>Controllers\PersonaFisicaController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\PuestoDeTrabajoController.cs">
+      <Link>Controllers\PuestoDeTrabajoController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Controllers\VinculoFamiliarController.cs">
+      <Link>Controllers\VinculoFamiliarController.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Util\BinaryContentResult.cs">
+      <Link>Util\BinaryContentResult.cs</Link>
+    </Compile>
+    <Compile Include="..\UI Common\Util\ReflectionUtil.cs">
+      <Link>Util\ReflectionUtil.cs</Link>
+    </Compile>
+    <Compile Include="Content\resources\Constantes2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Constantes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccidenteLaboralController.cs" />
+    <Compile Include="Controllers\ActividadEspecialController.cs" />
+    <Compile Include="Controllers\AsistenciaController.cs" />
+    <Compile Include="Controllers\CodigoMovimientoMabController.cs" />
+    <Compile Include="Controllers\CondicionEspecialInasistenciaController.cs" />
+    <Compile Include="Controllers\ConfiguracionAsignaturaEspecialController.cs" />
+    <Compile Include="Controllers\ConfiguracionTurnoController.cs" />
+    <Compile Include="Controllers\ClaustroDocenteController.cs" />
+    <Compile Include="Controllers\DocumentoRequeridoController.cs" />
+    <Compile Include="Controllers\NotaEtapaController.cs" />
+    <Compile Include="Controllers\NotaSuperiorController.cs" />
+    <Compile Include="Controllers\CronogramaEscolarController.cs" />
+    <Compile Include="Controllers\GrupoMabController.cs" />
+    <Compile Include="Controllers\InscripcionSuperiorController.cs" />
+    <Compile Include="Controllers\InasistenciaDocenteController.cs" />
+    <Compile Include="Controllers\InformeInasistenciaController.cs" />
+    <Compile Include="Controllers\IStateBag.cs" />
+    <Compile Include="Controllers\LibroFolioEstudianteController.cs" />
+    <Compile Include="Controllers\MatriculaController.cs" />
+    <Compile Include="Controllers\EstudianteConsultarController.cs" />
+    <Compile Include="Controllers\DesdoblamientoDivisionController.cs" />
+    <Compile Include="Controllers\CorrelatividadAsignaturaController.cs" />
+    <Compile Include="Controllers\HorarioEscuelaAsignaturasEspecialesController.cs" />
+    <Compile Include="Controllers\HorarioEscuelaController.cs" />
+    <Compile Include="Controllers\EquivalenciaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\EstructuraEscuelaController.cs" />
+    <Compile Include="Controllers\MabController.cs" />
+    <Compile Include="Controllers\NotaInicialController.cs" />
+    <Compile Include="Controllers\NotaPrimarioMedioController.cs" />
+    <Compile Include="Controllers\PrevisionAusenciaController.cs" />
+    <Compile Include="Controllers\PuestoDeTrabajoExternoController.cs" />
+    <Compile Include="Controllers\ReglaDeNegocioController.cs" />
+    <Compile Include="Controllers\ReincorporacionController.cs" />
+    <Compile Include="Controllers\RetrasoAgenteController.cs" />
+    <Compile Include="Controllers\SancionController.cs" />
+    <Compile Include="Controllers\SeccionController.cs" />
+    <Compile Include="Controllers\SuspensionActividadController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ModelBinders\LocalizedBinder.cs" />
+    <Compile Include="ModelBinders\StringBinder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\UI Common\Content\css\formulario.css">
+      <Link>Content\css\formulario.css</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\css\jquery.alerts.css">
+      <Link>Content\css\jquery.alerts.css</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\css\principal.css">
+      <Link>Content\css\principal.css</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\barraOcultarMenuLateral.jpg">
+      <Link>Content\images\barraOcultarMenuLateral.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\barraSubtitulo.jpg">
+      <Link>Content\images\barraSubtitulo.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\barraTitulo.jpg">
+      <Link>Content\images\barraTitulo.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\bg.jpg">
+      <Link>Content\images\bg.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\bgBtn.jpg">
+      <Link>Content\images\bgBtn.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\bgBtnHover.jpg">
+      <Link>Content\images\bgBtnHover.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\bgFila.jpg">
+      <Link>Content\images\bgFila.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\btn.jpg">
+      <Link>Content\images\btn.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\cerrarMenu.png">
+      <Link>Content\images\cerrarMenu.png</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\cerrarSesion.png">
+      <Link>Content\images\cerrarSesion.png</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\confirmacionAdvertencia.png">
+      <Link>Content\images\confirmacionAdvertencia.png</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\confirmacionError.png">
+      <Link>Content\images\confirmacionError.png</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\confirmacionExitosa.png">
+      <Link>Content\images\confirmacionExitosa.png</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\encabezado.jpg">
+      <Link>Content\images\encabezado.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\encabezadoLogueado.png">
+      <Link>Content\images\encabezadoLogueado.png</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\favicon.ico">
+      <Link>Content\images\favicon.ico</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\helpAlert.gif">
+      <Link>Content\images\helpAlert.gif</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\importantAlert.gif">
+      <Link>Content\images\importantAlert.gif</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\indicator.gif">
+      <Link>Content\images\indicator.gif</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\infoAlert.gif">
+      <Link>Content\images\infoAlert.gif</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\iniciarSesion.png">
+      <Link>Content\images\iniciarSesion.png</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\menuEncabezado.jpg">
+      <Link>Content\images\menuEncabezado.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\piePagina.jpg">
+      <Link>Content\images\piePagina.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\sel_classic.gif">
+      <Link>Content\images\sel_classic.gif</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\sel_vista.gif">
+      <Link>Content\images\sel_vista.gif</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\sel_win7.gif">
+      <Link>Content\images\sel_win7.gif</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\signoMas.jpg">
+      <Link>Content\images\signoMas.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\images\signoMenos.jpg">
+      <Link>Content\images\signoMenos.jpg</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\JqGrid\jquery-ui-1.8.6.custom.css">
+      <Link>Content\JqGrid\jquery-ui-1.8.6.custom.css</Link>
+    </Content>
+    <Content Include="..\UI Common\Content\JqGrid\ui.jqgrid.css">
+      <Link>Content\JqGrid\ui.jqgrid.css</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\jquery.alerts.js">
+      <Link>Scripts\jquery.alerts.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.agente.consultar.js">
+      <Link>Scripts\siage.agente.consultar.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.CalendarioEscolar.js">
+      <Link>Scripts\siage.CalendarioEscolar.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.ConsultarInscripcion.js">
+      <Link>Scripts\siage.ConsultarInscripcion.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.empresaExterna.consulta.js">
+      <Link>Scripts\siage.empresaExterna.consulta.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.estudianteConsultar.js">
+      <Link>Scripts\siage.estudianteConsultar.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.asignacionInstrumentoLegal.js">
+      <Link>Scripts\siage.asignacionInstrumentoLegal.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.estudianteConsultar.js">
+      <Link>Scripts\siage.estudianteConsultar.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.expediente.js">
+      <Link>Scripts\siage.expediente.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.instrumentoLegal.js">
+      <Link>Scripts\siage.instrumentoLegal.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Scripts\siage.vinculoFamiliar.js">
+      <Link>Scripts\siage.vinculoFamiliar.js</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\ConsultarAgenteEditor.ascx">
+      <Link>Views\Shared\ConsultarAgenteEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\ConsultarEmpresaExterna.ascx">
+      <Link>Views\Shared\ConsultarEmpresaExterna.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\ConsultarInscripcionEditor.ascx">
+      <Link>Views\Shared\ConsultarInscripcionEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\ConsultarInstrumentoLegalEditor.ascx">
+      <Link>Views\Shared\ConsultarInstrumentoLegalEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\ConsultarPuestoDeTrabajoEditor.ascx">
+      <Link>Views\Shared\ConsultarPuestoDeTrabajoEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EditorTemplates\AgenteSeleccionEditor.ascx">
+      <Link>Views\Shared\EditorTemplates\AgenteSeleccionEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EditorTemplates\AsignacionInstrumentoLegalEditor.ascx">
+      <Link>Views\Shared\EditorTemplates\AsignacionInstrumentoLegalEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EditorTemplates\CalendarioEscolarEditor.ascx">
+      <Link>Views\CalendarioEscolar\CalendarioEscolarEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EditorTemplates\ConsultarInscripcionEditor.ascx">
+      <Link>Views\Shared\EditorTemplates\ConsultarInscripcionEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EditorTemplates\DomicilioEditor.ascx">
+      <Link>Views\Shared\EditorTemplates\DomicilioEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EditorTemplates\ExpedienteEditor.ascx">
+      <Link>Views\Shared\EditorTemplates\ExpedienteEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EditorTemplates\InstrumentoLegalEditor.ascx">
+      <Link>Views\Shared\EditorTemplates\InstrumentoLegalEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EditorTemplates\PersonaFisicaEditor.ascx">
+      <Link>Views\Shared\EditorTemplates\PersonaFisicaEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EditorTemplates\VinculoFamiliarEditor.ascx">
+      <Link>Views\Shared\EditorTemplates\VinculoFamiliarEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\EstudianteBuscarEditor.ascx">
+      <Link>Views\Shared\EstudianteBuscarEditor.ascx</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\VersionController.ascx">
+      <Link>Views\Shared\VersionController.ascx</Link>
+    </Content>
+    <Content Include="Content\css\fullcalendar.css" />
+    <Content Include="Content\css\menu.css" />
+    <Content Include="Content\css\Site.css" />
+    <Content Include="Content\images\24min.gif" />
+    <Content Include="Content\images\bgGrid.jpg" />
+    <Content Include="Content\images\Calendar\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Content\images\Calendar\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Content\images\Calendar\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Content\images\Calendar\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Content\images\Calendar\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Content\images\Calendar\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Content\images\Calendar\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Content\images\Calendar\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Content\images\Calendar\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Content\images\Calendar\ui-icons_2694e8_256x240.png" />
+    <Content Include="Content\images\Calendar\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\images\Calendar\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Content\images\Calendar\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Content\images\Calendar\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\images\arrow.gif" />
+    <Content Include="Content\images\portada.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\procesando.gif" />
+    <Content Include="Content\images\usuario.png" />
+    <Content Include="Content\JqGrid\Images\bgGrid.jpg" />
+    <Content Include="Content\JqGrid\Images\bgSubGrid.jpg" />
+    <Content Include="Content\JqGrid\Images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\JqGrid\Images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\JqGrid\Images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\JqGrid\Images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\JqGrid\Images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\JqGrid\Images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\JqGrid\Images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\JqGrid\Images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\JqGrid\Images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\JqGrid\Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\JqGrid\Images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\JqGrid\Images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\JqGrid\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\JqGrid\Images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\JqGrid\Images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\JqGrid\jquery.searchFilter.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\Calendar\jquery.fullcalendar.js" />
+    <Content Include="Scripts\siage.documentoRequerido.js" />
+    <Content Include="Scripts\siage.gestionarAsignacionPorMab.js" />
+    <Content Include="Scripts\siage.menu.js" />
+    <Content Include="Scripts\siage.notaEtapa.js" />
+    <Content Include="Scripts\siage.notaSuperior.js" />
+    <Content Include="Scripts\siage.ClaustroDocente.js" />
+    <Content Include="Scripts\siage.notaInicial.js" />
+    <Content Include="Scripts\siage.ausenciaCortaDocente.js" />
+    <Content Include="Scripts\siage.cronogramaEscolar.js" />
+    <Content Include="Scripts\siage.notaPrimarioMedio.js" />
+    <Content Include="Scripts\siage.accidenteLaboralConsulta.js" />
+    <Content Include="Scripts\siage.actividadEspecial.js" />
+    <Content Include="Scripts\siage.InscripcionSuperior.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\siage.accidenteLaboral.js" />
+    <Content Include="Scripts\siage.consultaPrevisionAusencia.js" />
+    <Content Include="Scripts\siage.eliminarPrevision.js" />
+    <Content Include="Scripts\siage.EstructuraEscuela.js" />
+    <Content Include="Scripts\siage.inasistenciaDocente.js" />
+    <Content Include="Scripts\siage.Matricula.js" />
+    <Content Include="Scripts\siage.grillaSeccion.js" />
+    <Content Include="Scripts\JqGrid\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\JqGrid\json2.js" />
+    <Content Include="Scripts\jquery-1.6.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.13.custom.min.js" />
+    <Content Include="Scripts\siage.Estudiante.js" />
+    <Content Include="Scripts\siage.combosAnidados.js" />
+    <Content Include="Scripts\siage.Inscripcion.js" />
+    <Content Include="Scripts\jquery.maxlength.js" />
+    <Content Include="Scripts\jquery.regex.js" />
+    <Content Include="Scripts\siage.detalleHoraTurno.js" />
+    <Content Include="Scripts\ie-select-width-fix.js" />
+    <Content Include="Scripts\jquery.cascadingDropDown.js" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Scripts\menuUsuario.js" />
+    <Content Include="Scripts\siage.consultarEstructuraEscuela.js" />
+    <Content Include="Scripts\JqGrid\grid.base.js" />
+    <Content Include="Scripts\JqGrid\grid.celledit.js" />
+    <Content Include="Scripts\JqGrid\grid.common.js" />
+    <Content Include="Scripts\JqGrid\grid.custom.js" />
+    <Content Include="Scripts\JqGrid\grid.formedit.js" />
+    <Content Include="Scripts\JqGrid\grid.grouping.js" />
+    <Content Include="Scripts\JqGrid\grid.import.js" />
+    <Content Include="Scripts\JqGrid\grid.inlinedit.js" />
+    <Content Include="Scripts\JqGrid\grid.jqueryui.js" />
+    <Content Include="Scripts\JqGrid\grid.loader.js" />
+    <Content Include="Scripts\JqGrid\grid.locale-es.js" />
+    <Content Include="Scripts\JqGrid\grid.postext.js" />
+    <Content Include="Scripts\JqGrid\grid.setcolumns.js" />
+    <Content Include="Scripts\JqGrid\grid.subgrid.js" />
+    <Content Include="Scripts\JqGrid\grid.tbltogrid.js" />
+    <Content Include="Scripts\JqGrid\grid.treegrid.js" />
+    <Content Include="Scripts\JqGrid\jqDnR.js" />
+    <Content Include="Scripts\JqGrid\jqModal.js" />
+    <Content Include="Scripts\JqGrid\jquery.fmatter.js" />
+    <Content Include="Scripts\JqGrid\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\JqGrid\jquery.searchFilter.js" />
+    <Content Include="Scripts\JqGrid\JsonXml.js" />
+    <Content Include="Scripts\JqGrid\ui.multiselect.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.alphanumeric.js" />
+    <Content Include="Scripts\jquery.alphanumeric.pack.js" />
+    <Content Include="Scripts\jquery.maskedinput-1.2.2.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\siage.abmc.formulario-detalle.js" />
+    <Content Include="Scripts\siage.abmc.formulario-mixto.js" />
+    <Content Include="Scripts\siage.abmc.formulario.js" />
+    <Content Include="Scripts\siage.abmc.grilla-detalle.js" />
+    <Content Include="Scripts\siage.abmc.grilla-mixto.js" />
+    <Content Include="Scripts\siage.abmc.grilla.js" />
+    <Content Include="Scripts\siage.abmc.util.js" />
+    <Content Include="Scripts\siage.domicilio.js" />
+    <Content Include="Scripts\siage.formulario.js" />
+    <Content Include="Scripts\siage.grillas.js" />
+    <Content Include="Scripts\siage.grillas.util.js" />
+    <Content Include="Scripts\siage.mab.js" />
+    <Content Include="Scripts\siage.mensajes.js" />
+    <Content Include="Scripts\siage.configuracionTurno.js" />
+    <Content Include="Scripts\siage.personaFisica.js" />
+    <Content Include="Scripts\siage.puestoDeTrabajo.consultar.js" />
+    <Content Include="Scripts\siage.puestoDeTrabajoExterno.js" />
+    <Content Include="Scripts\siage.registrarAutorizacionPrevision.js" />
+    <Content Include="Scripts\siage.registrarInasistenciaPrevicionAusencia.js" />
+    <Content Include="Scripts\siage.registrarPrevision.js" />
+    <Content Include="Scripts\siage.Reincorporacion.js" />
+    <Content Include="Scripts\siage.retrasoAgente.js" />
+    <Content Include="Scripts\siage.sancion.js" />
+    <Content Include="Scripts\siage.seccion.js" />
+    <Content Include="Scripts\siage.suspensionActividad.js" />
+    <Content Include="Scripts\siage.util.js" />
+    <Content Include="Scripts\siage.validaciones.js" />
+    <Content Include="Scripts\yahoo-dom-event.js" />
+    <Content Include="Views\CalendarioEscolar\Index.aspx" />
+    <Content Include="Views\Calendario\CalendarioEditor.ascx" />
+    <Content Include="Views\Calendario\Index.aspx" />
+    <Content Include="Views\ClaustroDocente\Index.aspx" />
+    <Content Include="Views\ClaustroDocente\ClaustroDocenteEditor.ascx" />
+    <Content Include="Views\DocumentoRequerido\Index.aspx" />
+    <Content Include="Views\Mab\GestionarAsignacionPorMab.aspx" />
+    <Content Include="Views\NotaEtapa\Index.aspx" />
+    <Content Include="Views\NotaEtapa\NotaPrimarioMedioEditor.ascx" />
+    <Content Include="Views\NotaSuperior\Index.aspx" />
+    <Content Include="Views\NotaSuperior\NotaSuperiorEditor.ascx" />
+    <Content Include="Views\CronogramaEscolar\Index.aspx" />
+    <Content Include="Views\NotaInicial\Index.aspx" />
+    <Content Include="Views\NotaInicial\NotaInicialEditor.ascx" />
+    <Content Include="Views\NotaPrimarioMedio\Index.aspx" />
+    <Content Include="Views\NotaPrimarioMedio\NotaPrimarioMedioEditor.ascx" />
+    <Content Include="Views\PrevisionAusencia\Index.aspx" />
+    <Content Include="Views\PuestoDeTrabajo\Index.aspx" />
+    <Content Include="Views\Shared\AccidenteLaboralConsultaEditor.ascx" />
+    <Content Include="Views\AccidenteLaboral\AccidenteLaboralEditor.ascx" />
+    <Content Include="Views\AccidenteLaboral\Index.aspx" />
+    <Content Include="Views\ActividadDefinicionInstitucional\ActividadDefinicionInstitucionalEditor.ascx" />
+    <Content Include="Views\ActividadDefinicionInstitucional\Index.aspx" />
+    <Content Include="Views\ActividadEspecial\Index.aspx" />
+    <Content Include="Views\ActividadEspecial\ActividadEspecialEditor.ascx" />
+    <Content Include="Views\Asistencia\Index.aspx" />
+    <Content Include="Views\CodigoMovimientoMab\CodigoMovimientoMabEditor.ascx" />
+    <Content Include="Views\CodigoMovimientoMab\DesvincularCodigoMovimientoEditor.aspx" />
+    <Content Include="Views\CodigoMovimientoMab\Index.aspx" />
+    <Content Include="Views\CondicionEspecialInasistencia\Index.aspx" />
+    <Content Include="Views\CondicionEspecialInasistencia\CondicionEspecialInasistenciaEditor.ascx" />
+    <Content Include="Views\ConfiguracionAsignaturaEspecial\ConfiguracionAsignaturaEspecialEditor.ascx" />
+    <Content Include="Views\ConfiguracionAsignaturaEspecial\Index.aspx" />
+    <Content Include="Views\ConfiguracionTurno\ConfiguracionTurnoEditor.ascx" />
+    <Content Include="Views\Error\Aplicacion.aspx" />
+    <Content Include="Views\Error\Forbidden.aspx" />
+    <Content Include="Views\Error\PageNotFound.aspx" />
+    <Content Include="Views\EstudianteConsultar\Index.aspx" />
+    <Content Include="Views\Estudiante\EstudianteEditor.ascx" />
+    <Content Include="Views\Estudiante\Index.aspx" />
+    <Content Include="Views\GrupoMab\GrupoMabEditor.ascx" />
+    <Content Include="Views\GrupoMab\Index.aspx" />
+    <Content Include="Views\Home\Error.aspx" />
+    <Content Include="Views\HorarioEscuelaAsignaturasEspeciales\Index.aspx" />
+    <Content Include="Views\InasistenciaDocente\InasistenciaDocenteEditor.ascx" />
+    <Content Include="Views\InasistenciaDocente\Index.aspx" />
+    <Content Include="Views\InformeInasistencia\Index.aspx" />
+    <Content Include="Views\Shared\AgenteSeleccionEditor.ascx" />
+    <Content Include="Views\Shared\AsignacionInstrumentoLegalEditor.ascx" />
+    <Content Include="Views\Shared\Consultar.ascx" />
+    <Content Include="Views\Shared\ConsultarPrevisionAusencia.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\ConsultarPrevisionAusenciaEditor.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\PrevisionAusenciaEditor.ascx" />
+    <Content Include="Views\Shared\InscripcionSuperiorComunEditor.ascx" />
+    <Content Include="Views\InscripcionSuperior\Index.aspx" />
+    <Content Include="Views\InscripcionSuperior\InscripcionSuperiorEditor.ascx" />
+    <Content Include="Views\Inscripcion\Index.aspx" />
+    <Content Include="Views\Inscripcion\InscripcionEditor.ascx" />
+    <Content Include="Views\LibroFolioEstudiante\Index.aspx" />
+    <Content Include="Views\LibroFolioEstudiante\LibroFolioEstudianteEditor.ascx" />
+    <Content Include="Views\Mab\Index.aspx" />
+    <Content Include="Views\Mab\MabEditor.ascx" />
+    <Content Include="Views\Matricula\Index.aspx" />
+    <Content Include="Views\Matricula\MatriculaEditor.ascx" />
+    <Content Include="Views\PersonaFisica\Index.aspx" />
+    <Content Include="Views\PersonaFisica\PersonaFisicaRegistrar.ascx" />
+    <Content Include="Views\PrevisionAusencia\EliminarPrevision.aspx" />
+    <Content Include="Views\PrevisionAusencia\RegistrarDecisionAutorizacion.aspx" />
+    <Content Include="Views\PrevisionAusencia\RegistrarInasistenciaPrevision.aspx" />
+    <Content Include="Views\PrevisionAusencia\RegistrarPrevision.aspx" />
+    <Content Include="Views\PuestoDeTrabajoExterno\Index.aspx" />
+    <Content Include="Views\PuestoDeTrabajoExterno\PuestoDeTrabajoExternoEditor.ascx" />
+    <Content Include="Views\PuestoDeTrabajoExterno\PuestoDeTrabajoExternoVer.ascx" />
+    <Content Include="Views\ReglaDeNegocio\Index.aspx" />
+    <Content Include="Views\ReglaDeNegocio\ParametroEditor.ascx" />
+    <Content Include="Views\Reincorporacion\Index.aspx" />
+    <Content Include="Views\Reincorporacion\ReincorporacionEditor.ascx" />
+    <Content Include="Views\RetrasoAgente\Index.aspx" />
+    <Content Include="Views\RetrasoAgente\RetrasoAgenteEditor.ascx" />
+    <Content Include="Views\Sancion\Index.aspx" />
+    <Content Include="Views\Sancion\SancionEditor.ascx" />
+    <Content Include="Views\Seccion\Index.aspx" />
+    <Content Include="Views\Seccion\SeccionEditor.ascx" />
+    <Content Include="Views\Shared\AccidenteLaboralEditor.ascx" />
+    <Content Include="Views\Shared\EditorTemplates\DetalleHoraTurnoEditor.ascx" />
+    <Content Include="Views\ConfiguracionTurno\Index.aspx" />
+    <Content Include="Views\CorrelatividadAsignatura\CorrelatividaAsignatura.aspx" />
+    <Content Include="Views\Shared\DesdoblamientoDivisionEditor.ascx" />
+    <Content Include="Views\DesdoblamientoDivision\Index.aspx" />
+    <Content Include="Views\Equivalencia\Index.aspx" />
+    <Content Include="Views\EstructuraEscuela\EstructuraEscuelaEditor.ascx" />
+    <Content Include="Views\EstructuraEscuela\Index.aspx" />
+    <Content Include="Views\Home\IndexEscuela.aspx" />
+    <Content Include="Views\Home\SeleccionarPerfil.aspx" />
+    <Content Include="Views\HorarioEscuela\HorarioEscuelaEditor.ascx" />
+    <Content Include="Views\HorarioEscuela\Index.aspx" />
+    <Content Include="Views\Index.aspx" />
+    <Content Include="Views\Shared\EstructuraEscuelaConsultarEditor.ascx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\ExpedienteEditor.ascx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\PersonaFisicaEditor.ascx" />
+    <Content Include="Views\SuspensionActividad\Index.aspx" />
+    <Content Include="Views\SuspensionActividad\SuspensionActividadEditor.ascx" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\resources\Constantes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Constantes2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Siage.Test.MockObjects\Siage.Test.MockObjects.csproj">
+      <Project>{DCFEA076-C1EB-42F3-A1AF-43B10B04C6E3}</Project>
+      <Name>Siage.Test.MockObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infraestructure\Siage.Infraestructure\Siage.Infraestructure.csproj">
+      <Project>{F465C06A-BDCA-465D-9E94-0178C97604D4}</Project>
+      <Name>Siage.Infraestructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infraestructure\Siage.Security\Siage.Security.csproj">
+      <Project>{0406B860-5CBE-4666-8131-AA46CB2FC2A0}</Project>
+      <Name>Siage.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rules\Siage.Base\Siage.Base.csproj">
+      <Project>{2480EC80-6DEC-40A8-ACC4-3F7949B9A678}</Project>
+      <Name>Siage.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rules\Siage.Services.Core\Siage.Services.Core.csproj">
+      <Project>{6F8B226E-7822-4297-A6CD-74EB17F7634C}</Project>
+      <Name>Siage.Services.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rules\Siage.UCControllers\Siage.UCControllers.csproj">
+      <Project>{5D4697E6-1137-4F73-9998-E55E78DCEACE}</Project>
+      <Name>Siage.UCControllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Util\ExtensionMethods\ExtensionMethods.csproj">
+      <Project>{78C5CAA5-E65E-46B6-887A-02968AD82848}</Project>
+      <Name>ExtensionMethods</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\UI Common\Views\AjaxAbmc.Master">
+      <Link>Views\Shared\AjaxAbmc.Master</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\AjaxAbmcDetalle.Master">
+      <Link>Views\Shared\AjaxAbmcDetalle.Master</Link>
+    </Content>
+    <Content Include="..\UI Common\Views\AjaxAbmcMixto.Master">
+      <Link>Views\Shared\AjaxAbmcMixto.Master</Link>
+    </Content>
+    <Content Include="Views\Shared\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\SiteLogueado.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\SiteSeleccionPerfil.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3798</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/SIAGE Escuela</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "..\..\UI Common\Scripts\ie-select-width-fix.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\yahoo-dom-event.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.formulario.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.mensajes.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.abmc.formulario.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.abmc.formulario-detalle.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.abmc.formulario-mixto.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.abmc.grilla.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.abmc.grilla-detalle.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.abmc.grilla-mixto.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.formulario.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.abmc.util.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.grillas.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.grillas.util.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.util.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.validaciones.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.asignacionInstrumentoLegal.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.instrumentoLegal.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.expediente.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.agente.consultar.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.ConsultarInscripcion.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.domicilio.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.personaFisica.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.vinculoFamiliar.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.puestoDeTrabajo.consultar.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.estudianteConsultar.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Scripts\siage.empresaExterna.consulta.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Views\AjaxAbmc.Master" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Views\AjaxAbmcDetalle.Master" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Views\AjaxAbmcMixto.Master" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Content\images\barraSubtitulo.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\barraTitulo.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\bg.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\bgBtn.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\bgBtnHover.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\confirmacionAdvertencia.png" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\confirmacionError.png" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\confirmacionExitosa.png" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\encabezado.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\favicon.ico" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\indicator.gif" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\menuEncabezado.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\piePagina.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\sel_classic.gif" "..\Content\images" /i /d /y 
+xcopy "..\..\UI Common\Content\images\sel_vista.gif" "..\Content\images" /i /d /y 
+xcopy "..\..\UI Common\Content\images\sel_win7.gif" "..\Content\images" /i /d /y 
+xcopy "..\..\UI Common\Content\images\signoMas.jpg" "..\Content\images" /i /d /y 
+xcopy "..\..\UI Common\Content\images\signoMenos.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\JqGrid\jquery-ui-1.8.6.custom.css" "..\Content\JqGrid" /i /d /y
+xcopy "..\..\UI Common\Content\JqGrid\ui.jqgrid.css" "..\Content\JqGrid" /i /d /y
+xcopy "..\..\UI Common\Content\JqGrid\images\bgGrid.jpg" "..\Content\JqGrid\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\iniciarSesion.png" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\encabezadoLogueado.png" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\cerrarSesion.png" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\cerrarMenu.png" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\btn.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\barraOcultarMenuLateral.jpg" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\css\formulario.css" "..\Content\css" /i /d /y
+xcopy "..\..\UI Common\Content\css\principal.css" "..\Content\css" /i /d /y
+xcopy "..\..\UI Common\Scripts\jquery.alerts.js" "..\Scripts" /i /d /y
+xcopy "..\..\UI Common\Content\css\jquery.alerts.css" "..\Content\css" /i /d /y
+xcopy "..\..\UI Common\Content\images\helpAlert.gif" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\infoAlert.gif" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Content\images\importantAlert.gif" "..\Content\images" /i /d /y
+xcopy "..\..\UI Common\Views\Seccion\ConsultarSeccionEditor.ascx" "..\Views\Seccion" /i /d /y
+xcopy "..\..\UI Common\Views\Seccion\DetalleSeccionEditor.ascx" "..\Views\Seccion" /i /d /y
+xcopy "..\..\UI Common\Views\VersionController.ascx" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Views\Seccion\SeccionEditor.ascx" "..\Views\Seccion" /i /d /y
+xcopy "..\..\UI Common\Views\ConsultarPuestoDeTrabajoEditor.ascx" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Views\VersionController.ascx" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Views\EstudianteBuscarEditor.ascx" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Views\ConsultarEmpresaExterna.ascx" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Views\ConsultarAgenteEditor.ascx" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Views\ConsultarInstrumentoLegalEditor.ascx" "..\Views\Shared" /i /d /y
+xcopy "..\..\UI Common\Views\EditorTemplates\AsignacionInstrumentoLegalEditor.ascx" "..\Views\Shared\EditorTemplates" /i /d /y
+xcopy "..\..\UI Common\Views\EditorTemplates\InstrumentoLegalEditor.ascx" "..\Views\Shared\EditorTemplates" /i /d /y
+xcopy "..\..\UI Common\Views\EditorTemplates\ExpedienteEditor.ascx" "..\Views\Shared\EditorTemplates" /i /d /y
+xcopy "..\..\UI Common\Views\EditorTemplates\AgenteSeleccionEditor.ascx" "..\Views\Shared\EditorTemplates" /i /d /y
+xcopy "..\..\UI Common\Views\EditorTemplates\DomicilioEditor.ascx" "..\Views\Shared\EditorTemplates" /i /d /y
+xcopy "..\..\UI Common\Views\EditorTemplates\PersonaFisicaEditor.ascx" "..\Views\Shared\EditorTemplates" /i /d /y
+xcopy "..\..\UI Common\Views\EditorTemplates\VinculoFamiliarEditor.ascx" "..\Views\Shared\EditorTemplates" /i /d /y</PreBuildEvent>
+  </PropertyGroup>
+</Project>

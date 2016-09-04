@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D4697E6-1137-4F73-9998-E55E78DCEACE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Siage.UCControllers</RootNamespace>
+    <AssemblyName>Siage.UCControllers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapperResolvers\AsignacionInstrumentoLegalDeEmpresas.cs" />
+    <Compile Include="AutoMapperResolvers\ConfiguracionTurnoResolver.cs" />
+    <Compile Include="AutoMapperResolvers\PuestoDeTrabajoExternoResolver.cs" />
+    <Compile Include="AutoMapperResolvers\DireccionDeNivelNivelesEducativosPorTipoEducacion.cs" />
+    <Compile Include="AutoMapperResolvers\AsignacionInspeccionEscuelaResolver.cs" />
+    <Compile Include="AutoMapperResolvers\EmpresaDeInspeccionSupervisora.cs" />
+    <Compile Include="AutoMapperResolvers\EmpresaExternaResolver.cs" />
+    <Compile Include="AutoMapperResolvers\EmpresaModificarTipoEmpresa.cs" />
+    <Compile Include="AutoMapperResolvers\EmpresaRegistrarTurnosPorEscuela.cs" />
+    <Compile Include="AutoMapperResolvers\PlanEstudioResolver.cs" />
+    <Compile Include="AutoMapperResolvers\EmpresaVisadoCierreModel.cs" />
+    <Compile Include="AutoMapperResolvers\EmpresaConsultarModel.cs" />
+    <Compile Include="AutoMapperResolvers\PedidoAutorizacionCierreModelEscuelaCUE.cs" />
+    <Compile Include="AutoMapperResolvers\UnidadesAcademicasAsociadasAPlanDeEstudio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AgenteResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgenteResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Asistencia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Asistencia.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CalendarioResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarioResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CargoMinimo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CargoMinimo.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CarreraRules.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarreraRules.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CasaHabitacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CasaHabitacion.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CicloLectivoResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CicloLectivoResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CondEspInasistencia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CondEspInasistencia.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ConfiguracionTurno.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfiguracionTurno.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Contrato.Designer.cs">
+      <DependentUpon>Contrato.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AsignacionResource.Designer.cs">
+      <DependentUpon>AsignacionResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Inscripcion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inscripcion.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\OperacionPredioResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperacionPredioResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlantaFuncionalResource.Designer.cs">
+      <DependentUpon>PlantaFuncionalResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\EscuelaPlanRules.Designer.cs" />
+    <Compile Include="Resources\HorarioPuestoDeTrabajoResource.Designer.cs" />
+    <Compile Include="Resources\NivelCargoResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NivelCargoResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Mab.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mab.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TipoCargoResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoCargoResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TipoMovimientoInstrumentoLegalRulesResource.Designer.cs">
+      <DependentUpon>TipoMovimientoInstrumentoLegalRulesResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\DiagramacionCurso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagramacionCurso.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\EdificioRules.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EdificioRules.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Empresa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Empresa.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\EntidadesGenerales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntidadesGenerales.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FuncionEdificioResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuncionEdificioResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LocalRules.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalRules.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ParcelaResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParcelaResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PersonaJuridica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonaJuridica.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PredioResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PredioResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TipoEstructuraEdiliciaResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoEstructuraEdiliciaResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\TipoInspeccionIntermedia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoInspeccionIntermedia.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UnionPredioResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UnionPredioResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UsuarioResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsuarioResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Parametro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Parametro.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\VinculoEmpresaEdificioResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VinculoEmpresaEdificioResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rules\AccidenteLaboralRules.cs" />
+    <Compile Include="Rules\ActividadEspecialRules.cs" />
+    <Compile Include="Rules\AgenteRules.cs" />
+    <Compile Include="Rules\AsignacionPlanEstudioSuperiorRules.cs" />
+    <Compile Include="Rules\AsistenciaRules.cs" />
+    <Compile Include="Rules\AgrupamientoCargoRules.cs" />
+    <Compile Include="Rules\BecaRules.cs" />
+    <Compile Include="Rules\CalendarioRules.cs" />
+    <Compile Include="Rules\CargoMinimoRules.cs" />
+    <Compile Include="Rules\CarreraRules.cs" />
+    <Compile Include="Rules\CicloEducativoRules.cs" />
+    <Compile Include="Rules\CicloLectivoRules.cs" />
+    <Compile Include="Rules\CodigoMovimentoMabRules.cs" />
+    <Compile Include="Rules\CondicionEspecialInasistenciaRules.cs" />
+    <Compile Include="Rules\ConfiguracionTurnoRules.cs" />
+    <Compile Include="Rules\ContratoRules.cs" />
+    <Compile Include="Rules\CasaHabitacionRules.cs" />
+    <Compile Include="Rules\ActividadDefinicionInstitucionalRules.cs" />
+    <Compile Include="Rules\AsignacionInstrumentoLegalRules.cs" />
+    <Compile Include="Rules\AsignacionPlanEstudioRules.cs" />
+    <Compile Include="Rules\AsignaturaRules.cs" />
+    <Compile Include="Rules\CodigoAsignaturaRules.cs" />
+    <Compile Include="Rules\ClaustroDocenteRules.cs" />
+    <Compile Include="Rules\DetalleAsignaturaRules.cs" />
+    <Compile Include="Rules\NotaSuperiorRules.cs" />
+    <Compile Include="Rules\NotaInicialRules.cs" />
+    <Compile Include="Rules\CronogramaEscolarRules.cs" />
+    <Compile Include="Rules\InasistenciaDocenteRules.cs" />
+    <Compile Include="Rules\NotaPrimarioMedioRules.cs" />
+    <Compile Include="Rules\RetrasoAgenteRules.cs" />
+    <Compile Include="Rules\SistemaNotaRules.cs" />
+    <Compile Include="Rules\SuspensionActividadRules.cs" />
+    <Compile Include="Rules\EmpresaExternaRules.cs" />
+    <Compile Include="Rules\MatriculaRules.cs" />
+    <Compile Include="Rules\MotivoIncorporacionRules.cs" />
+    <Compile Include="Rules\OperacionPredioRules.cs" />
+    <Compile Include="Rules\PrevisionAusenciaRules.cs" />
+    <Compile Include="Rules\ProcesoRules.cs" />
+    <Compile Include="Rules\ReincorporacionRules.cs" />
+    <Compile Include="Rules\VinculoFamiliarRules.cs" />
+    <Compile Include="Rules\DocumentoRequeridoRules.cs" />
+    <Compile Include="Rules\DocumentoRules.cs" />
+    <Compile Include="Rules\GrupoMabRules.cs" />
+    <Compile Include="Rules\HistorialAcademicoRules.cs" />
+    <Compile Include="Rules\EstudianteRules.cs" />
+    <Compile Include="Rules\HistorialDocumentoRules.cs" />
+    <Compile Include="Rules\InasistenciaRules.cs" />
+    <Compile Include="Rules\PlantaFuncionalRules.cs" />
+    <Compile Include="Rules\SancionRules.cs" />
+    <Compile Include="Rules\AsignacionRules.cs" />
+    <Compile Include="Rules\CorrelatividadRules.cs" />
+    <Compile Include="Rules\DetalleHorasTurnoRules.cs" />
+    <Compile Include="Rules\DivisionEdificioRules.cs" />
+    <Compile Include="Rules\HorarioPuestoDeTrabajoRules.cs" />
+    <Compile Include="Rules\MabRules.cs" />
+    <Compile Include="Rules\NivelCargoRules.cs" />
+    <Compile Include="Rules\NivelEducativoRules.cs" />
+    <Compile Include="Rules\SolicitudPTRules.cs" />
+    <Compile Include="Rules\SubGrupoRules.cs" />
+    <Compile Include="Rules\TipoCargoRules.cs" />
+    <Compile Include="Rules\TipoInstrumentoLegalRules.cs" />
+    <Compile Include="Rules\EspecialidadRules.cs" />
+    <Compile Include="Rules\UnionPredioRules.cs" />
+    <Compile Include="Rules\OrientacionRules.cs" />
+    <Compile Include="Rules\SubOrientacionRules.cs" />
+    <Compile Include="Rules\TramiteAdquisicionRules.cs" />
+    <Compile Include="Rules\DetalleSeccionRules.cs" />
+    <Compile Include="Rules\SeccionRules.cs" />
+    <Compile Include="Rules\GrupoRules.cs" />
+    <Compile Include="Rules\PersonaJuridicaRules.cs" />
+    <Compile Include="Rules\TituloRules.cs" />
+    <Compile Include="Rules\PuestoDeTrabajoRules.cs" />
+    <Compile Include="Rules\GradoAñoRules.cs" />
+    <Compile Include="Rules\TurnoRules.cs" />
+    <Compile Include="Rules\ItemStockRules.cs" />
+    <Compile Include="Rules\PersonaFisicaRules.cs" />
+    <Compile Include="Rules\DepositoRules.cs" />
+    <Compile Include="Rules\PruebaTipoAdquisicionRules.cs" />
+    <Compile Include="Rules\LocalidadRules.cs" />
+    <Compile Include="Rules\DetalleHoraTurnoRules.cs" />
+    <Compile Include="Rules\DomicilioRules.cs" />
+    <Compile Include="Rules\ParametroRules.cs" />
+    <Compile Include="Rules\ProgramaPresupuestarioRules.cs" />
+    <Compile Include="Rules\OrdenDePagoRules.cs" />
+    <Compile Include="Rules\TipoMovimientoInstrumentoLegalRules.cs" />
+    <Compile Include="Rules\DesdoblamientoDivisionRules.cs" />
+    <Compile Include="Rules\DetalleHorarioRules.cs" />
+    <Compile Include="Rules\DireccionDeNivelRules.cs" />
+    <Compile Include="Rules\InscripcionRules.cs" />
+    <Compile Include="Rules\TipoAdquisicionRules.cs" />
+    <Compile Include="Rules\UnidadAcademicaRules.cs" />
+    <Compile Include="Rules\EscuelaPlanRules.cs" />
+    <Compile Include="Rules\DiagramacionCursoRules.cs" />
+    <Compile Include="Rules\PlanEstudioRules.cs" />
+    <Compile Include="Rules\DivisionRules.cs" />
+    <Compile Include="Rules\EdificioRules.cs" />
+    <Compile Include="Rules\EmpresaRules.cs" />
+    <Compile Include="Rules\EntidadesGeneralesRules.cs" />
+    <Compile Include="Rules\ExpedienteRules.cs" />
+    <Compile Include="Rules\FuncionEdificioRules.cs" />
+    <Compile Include="Rules\InstrumentoLegalRules.cs" />
+    <Compile Include="Rules\LocalRules.cs" />
+    <Compile Include="Rules\ParcelaRules.cs" />
+    <Compile Include="Rules\PlantaRules.cs" />
+    <Compile Include="Rules\PredioRules.cs" />
+    <Compile Include="Rules\TipoEmpresaRules.cs" />
+    <Compile Include="Rules\TipoEstructuraEdiliciaRules.cs" />
+    <Compile Include="Rules\TipoInspeccionIntermediaRules.cs" />
+    <Compile Include="Rules\TipoLocalRules.cs" />
+    <Compile Include="Rules\TipoOperacionEdificioRules.cs" />
+    <Compile Include="Rules\TipoOperacionPredioRules.cs" />
+    <Compile Include="Rules\UnionEdificioRules.cs" />
+    <Compile Include="Rules\UsuarioRules.cs" />
+    <Compile Include="Rules\VinculoEmpresaEdificioRules.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\Lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\Lib\log4net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\Siage.Data\Siage.Data.csproj">
+      <Project>{B265E0B3-5C5B-4C15-86C4-94F3532A0650}</Project>
+      <Name>Siage.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Util\ValidationAttributes\ValidationAttributes.csproj">
+      <Project>{17FEA4D0-1CE6-4DE7-93A2-A7054E60EF6B}</Project>
+      <Name>ValidationAttributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Siage.Base\Siage.Base.csproj">
+      <Project>{2480EC80-6DEC-40A8-ACC4-3F7949B9A678}</Project>
+      <Name>Siage.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Siage.Core\Siage.Core.csproj">
+      <Project>{10B6B7FB-A774-4CBC-9F27-E0E34485DC3A}</Project>
+      <Name>Siage.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Siage.Exceptions\Siage.Exceptions.csproj">
+      <Project>{FC0BBE30-E796-4CA4-A71F-C4EF1D7F858E}</Project>
+      <Name>Siage.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Siage.Services.Core\Siage.Services.Core.csproj">
+      <Project>{6F8B226E-7822-4297-A6CD-74EB17F7634C}</Project>
+      <Name>Siage.Services.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AgenteResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AgenteResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Asistencia.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Asistencia.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CalendarioResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CalendarioResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CargoMinimo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CargoMinimo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CarreraRules.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CarreraRules.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CasaHabitacion.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CasaHabitacion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CicloLectivoResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CicloLectivoResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CondEspInasistencia.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CondEspInasistencia.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ConfiguracionTurno.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConfiguracionTurno.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Contrato.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Contrato.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AsignacionResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AsignacionResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Inscripcion.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Inscripcion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OperacionPredioResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OperacionPredioResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlantaFuncionalResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PlantaFuncionalResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EscuelaPlanRules.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HorarioPuestoDeTrabajoResource.resx" />
+    <EmbeddedResource Include="Resources\NivelCargoResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NivelCargoResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Mab.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mab.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TipoCargoResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TipoCargoResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TipoMovimientoInstrumentoLegalRulesResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TipoMovimientoInstrumentoLegalRulesResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DiagramacionCurso.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DiagramacionCurso.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EdificioRules.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EdificioRules.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Empresa.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Empresa.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EntidadesGenerales.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EntidadesGenerales.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FuncionEdificioResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FuncionEdificioResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LocalRules.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalRules.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ParcelaResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ParcelaResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PersonaJuridica.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonaJuridica.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PredioResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PredioResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TipoEstructuraEdiliciaResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TipoEstructuraEdiliciaResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TipoInspeccionIntermedia.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TipoInspeccionIntermedia.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\UnionPredioResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UnionPredioResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\UsuarioResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UsuarioResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Parametro.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Parametro.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\VinculoEmpresaEdificioResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VinculoEmpresaEdificioResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10B6B7FB-A774-4CBC-9F27-E0E34485DC3A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Siage.Core</RootNamespace>
+    <AssemblyName>Siage.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DaoInterfaces\IDaoDetalleClaustro.cs" />
+    <Compile Include="DaoInterfaces\IDaoAusenciaCorta.cs" />
+    <Compile Include="DaoInterfaces\IDaoClaustroDocente.cs" />
+    <Compile Include="DaoInterfaces\IDaoActividadEspecial.cs" />
+    <Compile Include="DaoInterfaces\IDaoCalendarioEscolar.cs" />
+    <Compile Include="DaoInterfaces\IDaoCondicionIva.cs" />
+    <Compile Include="DaoInterfaces\IDaoAccidenteLaboral.cs" />
+    <Compile Include="DaoInterfaces\IDaoCondicionEspecialInasistencia.cs" />
+    <Compile Include="DaoInterfaces\IDaoDocenteActividadEspecial.cs" />
+    <Compile Include="DaoInterfaces\IDaoEtapaNivel.cs" />
+    <Compile Include="DaoInterfaces\IDaoInasistenciaDocente.cs" />
+    <Compile Include="DaoInterfaces\IDaoMotivoIncorporacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoParoAgenteAcatamiento.cs" />
+    <Compile Include="DaoInterfaces\IDaoReincorporacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoPrevisionAusencia.cs" />
+    <Compile Include="DaoInterfaces\IDaoRetrasoAgente.cs" />
+    <Compile Include="DaoInterfaces\IDaoSistemaCuantitativo.cs" />
+    <Compile Include="DaoInterfaces\IDaoSistemaCualitativo.cs" />
+    <Compile Include="DaoInterfaces\IDaoDetalleTipoNota.cs" />
+    <Compile Include="DaoInterfaces\IDaoDetalleValor.cs" />
+    <Compile Include="DaoInterfaces\IDaoSuspensionActividad.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoVinculo.cs" />
+    <Compile Include="DaoInterfaces\IDaoAgrupamientoCargo.cs" />
+    <Compile Include="DaoInterfaces\IDaoAsignacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoAsignaturaEscuela.cs" />
+    <Compile Include="DaoInterfaces\IDaoBeca.cs" />
+    <Compile Include="DaoInterfaces\IDaoCalendario.cs" />
+    <Compile Include="DaoInterfaces\IDaoCodigoMovimientoMab.cs" />
+    <Compile Include="DaoInterfaces\IDaoComunicacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoConfiguracionAsignaturaEspecial.cs" />
+    <Compile Include="DaoInterfaces\IDaoDenominacionTipoAgente.cs" />
+    <Compile Include="DaoInterfaces\IDaoDetalleAsignacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoDetalleAsignatura.cs" />
+    <Compile Include="DaoInterfaces\IDaoDetalleInasistencia.cs" />
+    <Compile Include="DaoInterfaces\IDaoDocumento.cs" />
+    <Compile Include="DaoInterfaces\IDaoDocumentoRequerido.cs" />
+    <Compile Include="DaoInterfaces\IDaoEjecucionMab.cs" />
+    <Compile Include="DaoInterfaces\IDaoEscuelaAnexo.cs" />
+    <Compile Include="DaoInterfaces\IDaoEstadoAsignacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoEstadoPuestoTrabajo.cs" />
+    <Compile Include="DaoInterfaces\IDaoEstatuto.cs" />
+    <Compile Include="DaoInterfaces\IDaoGrupoMab.cs" />
+    <Compile Include="DaoInterfaces\IDaoHistorialAcademico.cs" />
+    <Compile Include="DaoInterfaces\IDaoHistorialDocumento.cs" />
+    <Compile Include="DaoInterfaces\IDaoHorarioPuestoDeTrabajo.cs" />
+    <Compile Include="DaoInterfaces\IDaoInasistencia.cs" />
+    <Compile Include="DaoInterfaces\IDaoMab.cs" />
+    <Compile Include="DaoInterfaces\IDaoMatricula.cs" />
+    <Compile Include="DaoInterfaces\IDaoModalidadMab.cs" />
+    <Compile Include="DaoInterfaces\IDaoMotivoBajaAgente.cs" />
+    <Compile Include="DaoInterfaces\IDaoMotivoBajaSancion.cs" />
+    <Compile Include="DaoInterfaces\IDaoMotivoSancion.cs" />
+    <Compile Include="DaoInterfaces\IDaoNivelCargo.cs" />
+    <Compile Include="DaoInterfaces\IDaoNota.cs" />
+    <Compile Include="DaoInterfaces\IDaoOrganismoEmisorDocumento.cs" />
+    <Compile Include="DaoInterfaces\IDaoOrientacionSubOrientacionYEspecialidad.cs" />
+    <Compile Include="DaoInterfaces\IDaoParametroIngresoEscolar.cs" />
+    <Compile Include="DaoInterfaces\IDaoPlantaFuncional.cs" />
+    <Compile Include="DaoInterfaces\IDaoPreInscripcion.cs" />
+    <Compile Include="DaoInterfaces\IDaoProceso.cs" />
+    <Compile Include="DaoInterfaces\IDaoSituacionDeRevista.cs" />
+    <Compile Include="DaoInterfaces\IDaoSolicitudCreacionPuestoDeTrabajo.cs" />
+    <Compile Include="DaoInterfaces\IDaoSancion.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoAgente.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoCargoEspecial.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoNota.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoNovedad.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoPuesto.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoSancion.cs" />
+    <Compile Include="DaoInterfaces\IDaoTituloAgente.cs" />
+    <Compile Include="DaoInterfaces\IDaoTurnoPorEscuela.cs" />
+    <Compile Include="DaoInterfaces\IDaoSexo.cs" />
+    <Compile Include="DaoInterfaces\IDaoEstadoCivil.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoDomicilio.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoCalle.cs" />
+    <Compile Include="DaoInterfaces\IDaoBarrio.cs" />
+    <Compile Include="DaoInterfaces\IDaoCalle.cs" />
+    <Compile Include="DaoInterfaces\IDaoCorrelatividad.cs" />
+    <Compile Include="DaoInterfaces\IDaoCodigoAsignatura.cs" />
+    <Compile Include="DaoInterfaces\IDaoAsignatura.cs" />
+    <Compile Include="DaoInterfaces\IDaoHistorialDireccionDeNivel.cs" />
+    <Compile Include="DaoInterfaces\IDaoHistorialEmpresa.cs" />
+    <Compile Include="DaoInterfaces\IDaoHistorialEscuela.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoDocumento.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoInstrumentoLegal.cs" />
+    <Compile Include="DaoInterfaces\IDaoDetalleSeccion.cs" />
+    <Compile Include="DaoInterfaces\IDaoEspecialidad.cs" />
+    <Compile Include="DaoInterfaces\IDaoOrientacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoSeccion.cs" />
+    <Compile Include="DaoInterfaces\IDaoSubGrupo.cs" />
+    <Compile Include="DaoInterfaces\IDaoGrupo.cs" />
+    <Compile Include="DaoInterfaces\IDaoPersonaJuridica.cs" />
+    <Compile Include="DaoInterfaces\IDaoSubOrientacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoJornada.cs" />
+    <Compile Include="DaoInterfaces\IDaoTitulo.cs" />
+    <Compile Include="DaoInterfaces\IDaoPedidoAutorizacionCierre.cs" />
+    <Compile Include="DaoInterfaces\IDaoRolPorUsuario.cs" />
+    <Compile Include="DaoInterfaces\IDaoPuestoDeTrabajo.cs" />
+    <Compile Include="DaoInterfaces\IDaoResolucion.cs" />
+    <Compile Include="DaoInterfaces\IDaoModalidadJornada.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoEscuela.cs" />
+    <Compile Include="DaoInterfaces\IDaoValorParametro.cs" />
+    <Compile Include="DaoInterfaces\IDaoEmpresaBase.cs" />
+    <Compile Include="DaoInterfaces\IDaoGradoAño.cs" />
+    <Compile Include="DaoInterfaces\IDaoAsignacionInstrumentoLegal.cs" />
+    <Compile Include="DaoInterfaces\IDaoCicloLectivo.cs" />
+    <Compile Include="DaoInterfaces\IDaoDesdoblamiento.cs" />
+    <Compile Include="DaoInterfaces\IDaoDetalleHorario.cs" />
+    <Compile Include="DaoInterfaces\IDaoHistorialLocal.cs" />
+    <Compile Include="DaoInterfaces\IDaoItemStock.cs" />
+    <Compile Include="DaoInterfaces\IDaoNivelEducativo.cs" />
+    <Compile Include="DaoInterfaces\IDaoNivelEducativoPorTipoEducacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoObraSocial.cs" />
+    <Compile Include="DaoInterfaces\IDaoParametro.cs" />
+    <Compile Include="DaoInterfaces\IDaoPeriodoLectivo.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoMovimientoInstrumentoLegal.cs" />
+    <Compile Include="DaoInterfaces\IDaoTurno.cs" />
+    <Compile Include="DaoInterfaces\IDaoUnidadAcademica.cs" />
+    <Compile Include="DaoInterfaces\IDaoEscuelaPlan.cs" />
+    <Compile Include="DaoInterfaces\IDao.cs" />
+    <Compile Include="DaoInterfaces\IDaoAgente.cs" />
+    <Compile Include="DaoInterfaces\IDaoAsignacionInspeccionEscuela.cs" />
+    <Compile Include="DaoInterfaces\IDaoAtributo.cs" />
+    <Compile Include="DaoInterfaces\IDaoCargoMinimo.cs" />
+    <Compile Include="DaoInterfaces\IDaoCarrera.cs" />
+    <Compile Include="DaoInterfaces\IDaoCasaHabitacion.cs" />
+    <Compile Include="DaoInterfaces\IDaoCicloEducativo.cs" />
+    <Compile Include="DaoInterfaces\IDaoConfiguracionTurno.cs" />
+    <Compile Include="DaoInterfaces\IDaoContrato.cs" />
+    <Compile Include="DaoInterfaces\IDaoDepartamentoProvincial.cs" />
+    <Compile Include="DaoInterfaces\IDaoDeposito.cs" />
+    <Compile Include="DaoInterfaces\IDaoDetalleHoraTurno.cs" />
+    <Compile Include="DaoInterfaces\IDaoDiagramacionCurso.cs" />
+    <Compile Include="DaoInterfaces\IDaoDireccionDeNivel.cs" />
+    <Compile Include="DaoInterfaces\IDaoDomicilio.cs" />
+    <Compile Include="DaoInterfaces\IDaoEdificio.cs" />
+    <Compile Include="DaoInterfaces\IDaoEmpresaExterna.cs" />
+    <Compile Include="DaoInterfaces\IDaoEscuela.cs" />
+    <Compile Include="DaoInterfaces\IDaoEscuelaPrivada.cs" />
+    <Compile Include="DaoInterfaces\IDaoEstudiante.cs" />
+    <Compile Include="DaoInterfaces\IDaoExpediente.cs" />
+    <Compile Include="DaoInterfaces\IDaoFuncionEdificio.cs" />
+    <Compile Include="DaoInterfaces\IDaoHistorialEdificio.cs" />
+    <Compile Include="DaoInterfaces\IDaoHistorialInspeccion.cs" />
+    <Compile Include="DaoInterfaces\IDaoHistorialPredio.cs" />
+    <Compile Include="DaoInterfaces\IDaoInscripcion.cs" />
+    <Compile Include="DaoInterfaces\IDaoInspeccion.cs" />
+    <Compile Include="DaoInterfaces\IDaoInstrumentoLegal.cs" />
+    <Compile Include="DaoInterfaces\IDaoLocal.cs" />
+    <Compile Include="DaoInterfaces\IDaoLocalidad.cs" />
+    <Compile Include="DaoInterfaces\IDaoOrdenDePago.cs" />
+    <Compile Include="DaoInterfaces\IDaoPais.cs" />
+    <Compile Include="DaoInterfaces\IDaoParcela.cs" />
+    <Compile Include="DaoInterfaces\IDaoPersonaFisica.cs" />
+    <Compile Include="DaoInterfaces\IDaoPlanEstudio.cs" />
+    <Compile Include="DaoInterfaces\IDaoPlano.cs" />
+    <Compile Include="DaoInterfaces\IDaoPlanta.cs" />
+    <Compile Include="DaoInterfaces\IDaoPredio.cs" />
+    <Compile Include="DaoInterfaces\IDaoProgramaPresupuestario.cs" />
+    <Compile Include="DaoInterfaces\IDaoProvider.cs" />
+    <Compile Include="DaoInterfaces\IDaoProvincia.cs" />
+    <Compile Include="DaoInterfaces\IDaoServicio.cs" />
+    <Compile Include="DaoInterfaces\IDaoServicioConfigurado.cs" />
+    <Compile Include="DaoInterfaces\IDaoServicioEntidad.cs" />
+    <Compile Include="DaoInterfaces\IDaoSucursalBancaria.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoAdquisicion.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoCargo.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoEntidad.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoEstructuraEdilicia.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoInspeccionIntermedia.cs" />
+    <Compile Include="DaoInterfaces\IDaoTipoLocal.cs" />
+    <Compile Include="DaoInterfaces\IDaoOperacionEdificio.cs" />
+    <Compile Include="DaoInterfaces\IDaoOperacionPredio.cs" />
+    <Compile Include="DaoInterfaces\IDaoTramiteAdquisicion.cs" />
+    <Compile Include="DaoInterfaces\IDaoUsuario.cs" />
+    <Compile Include="DaoInterfaces\IDaoValorPorAtributo.cs" />
+    <Compile Include="DaoInterfaces\IDaoVinculoEmpresaEdificio.cs" />
+    <Compile Include="DaoInterfaces\IDaoVinculoFamiliar.cs" />
+    <Compile Include="DaoInterfaces\IDaoZonaDesfavorable.cs" />
+    <Compile Include="DaoInterfaces\IDaoEscuelaPorTipoNivelEducativo.cs" />
+    <Compile Include="DomainServiceInterfaces\IContextProvider.cs" />
+    <Compile Include="Domain\AccidenteLaboral.cs" />
+    <Compile Include="Domain\ActividadEspecial.cs" />
+    <Compile Include="Domain\Agente.cs" />
+    <Compile Include="Domain\AgrupamientoCargo.cs" />
+    <Compile Include="Domain\ApoyoAdministrativo.cs" />
+    <Compile Include="Domain\ArticuloResolucion.cs" />
+    <Compile Include="Domain\Asignacion.cs" />
+    <Compile Include="Domain\AsignacionInspeccionEscuela.cs" />
+    <Compile Include="Domain\AsignaturaEscuela.cs" />
+    <Compile Include="Domain\Atributo.cs" />
+    <Compile Include="Domain\AusenciaCorta.cs" />
+    <Compile Include="Domain\AvanceConstruccion.cs" />
+    <Compile Include="Domain\Barrio.cs" />
+    <Compile Include="Domain\Calendario.cs" />
+    <Compile Include="Domain\Calle.cs" />
+    <Compile Include="Domain\CargoMinimo.cs" />
+    <Compile Include="Domain\Carrera.cs" />
+    <Compile Include="Domain\CasaHabitacion.cs" />
+    <Compile Include="Domain\CicloEducativo.cs" />
+    <Compile Include="Domain\CicloLectivo.cs" />
+    <Compile Include="Domain\CircuitoAutorizacionLicencia.cs" />
+    <Compile Include="Domain\CodigoAsignatura.cs" />
+    <Compile Include="Domain\CodigoMovimientoMab.cs" />
+    <Compile Include="Domain\Comunicacion.cs" />
+    <Compile Include="Domain\Beca.cs" />
+    <Compile Include="Domain\CondicionEspecialInasistencia.cs" />
+    <Compile Include="Domain\ConfiguracionLicencia.cs" />
+    <Compile Include="Domain\CondicionIva.cs" />
+    <Compile Include="Domain\CalendarioEscolar.cs" />
+    <Compile Include="Domain\ClaustroDocente.cs" />
+    <Compile Include="Domain\EtapaNivel.cs" />
+    <Compile Include="Domain\DetalleClaustro.cs" />
+    <Compile Include="Domain\Semestre.cs" />
+    <Compile Include="Domain\SistemaAsignatura.cs" />
+    <Compile Include="Domain\SuspensionActividad.cs" />
+    <Compile Include="Domain\Legajo.cs" />
+    <Compile Include="Domain\MotivoRetrasoAgente.cs" />
+    <Compile Include="Domain\ParoAgenteAcatamiento.cs" />
+    <Compile Include="Domain\RetrasoAgente.cs" />
+    <Compile Include="Domain\DocenteActividadEspecial.cs" />
+    <Compile Include="Domain\HistorialAccidenteLaboral.cs" />
+    <Compile Include="Domain\PrevisionAusencia.cs" />
+    <Compile Include="Domain\DetalleTipoNota.cs" />
+    <Compile Include="Domain\SistemaCuantitativo.cs" />
+    <Compile Include="Domain\SistemaNota.cs" />
+    <Compile Include="Domain\SistemaCualitativo.cs" />
+    <Compile Include="Domain\DetalleValor.cs" />
+    <Compile Include="Domain\TipoDocumentacion.cs" />
+    <Compile Include="Domain\TipoVinculo.cs" />
+    <Compile Include="Domain\DenominacionTipoAgente.cs" />
+    <Compile Include="Domain\DetalleAsignacion.cs" />
+    <Compile Include="Domain\DetalleCondicionEspecial.cs" />
+    <Compile Include="Domain\DetalleInasistencia.cs" />
+    <Compile Include="Domain\DireccionDeInfraestructura.cs" />
+    <Compile Include="Domain\DireccionDeRRHH.cs" />
+    <Compile Include="Domain\DireccionDeSistemas.cs" />
+    <Compile Include="Domain\DireccionDeTesoreria.cs" />
+    <Compile Include="Domain\DocenteAdHonorem.cs" />
+    <Compile Include="Domain\Documento.cs" />
+    <Compile Include="Domain\DocumentoRequerido.cs" />
+    <Compile Include="Domain\EjecucionMab.cs" />
+    <Compile Include="Domain\EjecucionMABEstadosPuesto.cs" />
+    <Compile Include="Domain\EscuelaAnexo.cs" />
+    <Compile Include="Domain\EscuelaPorTipoNivelEducativo.cs" />
+    <Compile Include="Domain\EstadoAsignacion.cs" />
+    <Compile Include="Domain\EstadoCivil.cs" />
+    <Compile Include="Domain\EstadoSolicitudCreacionPuestoDeTrabajo.cs" />
+    <Compile Include="Domain\GradoAnioPorTipoNivelEducativo.cs" />
+    <Compile Include="Domain\GrupoMab.cs" />
+    <Compile Include="Domain\HistorialAcademico.cs" />
+    <Compile Include="Domain\HistorialCasaHabitacion.cs" />
+    <Compile Include="Domain\HistorialDocumento.cs" />
+    <Compile Include="Domain\HistorialEstadoEmpresa.cs" />
+    <Compile Include="Domain\HistorialEstadoSolAmplEstructuraEmpresa.cs" />
+    <Compile Include="Domain\HistorialEstadoSolicitudCreacionPuestoDeTrabajo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\HistorialNivelCargo.cs" />
+    <Compile Include="Domain\HistorialParcela.cs" />
+    <Compile Include="Domain\HistorialServicioEntidad.cs" />
+    <Compile Include="Domain\HistorialTipoAdquisicion.cs" />
+    <Compile Include="Domain\HistorialTipoCargo.cs" />
+    <Compile Include="Domain\HorarioPuestoDeTrabajo.cs" />
+    <Compile Include="Domain\Inasistencia.cs" />
+    <Compile Include="Domain\InasistenciaDocente.cs" />
+    <Compile Include="Domain\IngresoPruebaAptitud.cs" />
+    <Compile Include="Domain\IngresoSorteo.cs" />
+    <Compile Include="Domain\Mab.cs" />
+    <Compile Include="Domain\Matricula.cs" />
+    <Compile Include="Domain\Ministerio.cs" />
+    <Compile Include="Domain\ModalidadMab.cs" />
+    <Compile Include="Domain\ModeloEstructuraOrganigrama.cs" />
+    <Compile Include="Domain\MotivoBajaAgente.cs" />
+    <Compile Include="Domain\MotivoBajaSancion.cs" />
+    <Compile Include="Domain\MotivoIncorporacion.cs" />
+    <Compile Include="Domain\MotivoSancion.cs" />
+    <Compile Include="Domain\NivelCargo.cs" />
+    <Compile Include="Domain\Nota.cs" />
+    <Compile Include="Domain\NuevoCargo.cs" />
+    <Compile Include="Domain\OrganismoEmisorDocumento.cs" />
+    <Compile Include="Domain\OrientacionSubOrientacionYEspecialidad.cs" />
+    <Compile Include="Domain\PaqueteNoPresupuestado.cs" />
+    <Compile Include="Domain\PaquetePresupuestadoEmpresa.cs" />
+    <Compile Include="Domain\ParametroIngresoEscolar.cs" />
+    <Compile Include="Domain\PedidoLicencia.cs" />
+    <Compile Include="Domain\PlantaExterna.cs" />
+    <Compile Include="Domain\PlantaFuncionalPuestoAsociado.cs" />
+    <Compile Include="Domain\PlantaFuncionalResumen.cs" />
+    <Compile Include="Domain\PlantaFuncionalResumenInasistencia.cs" />
+    <Compile Include="Domain\PlantaFuncionalResumenLicencia.cs" />
+    <Compile Include="Domain\PlantaNoPresupLiquidada.cs" />
+    <Compile Include="Domain\PlantaPresupAsignada.cs" />
+    <Compile Include="Domain\PlantaProvisoriaNoVinculada.cs" />
+    <Compile Include="Domain\PlantaProvisoriaVinculada.cs" />
+    <Compile Include="Domain\Preinscripcion.cs" />
+    <Compile Include="Domain\Proceso.cs" />
+    <Compile Include="Domain\Reincorporacion.cs" />
+    <Compile Include="Domain\Sancion.cs" />
+    <Compile Include="Domain\Secretaria.cs" />
+    <Compile Include="Domain\Sexo.cs" />
+    <Compile Include="Domain\SituacionDeRevista.cs" />
+    <Compile Include="Domain\SolicitudAmpliacionEstructuraEmpresa.cs" />
+    <Compile Include="Domain\SolicitudCreacionPuestoDeTrabajo.cs" />
+    <Compile Include="Domain\SubSecretaria.cs" />
+    <Compile Include="Domain\TipoAgente.cs" />
+    <Compile Include="Domain\TipoCalle.cs" />
+    <Compile Include="Domain\TipoCargoEspecial.cs" />
+    <Compile Include="Domain\TipoDocumento.cs" />
+    <Compile Include="Domain\TipoDomicilio.cs" />
+    <Compile Include="Domain\TipoGestion.cs" />
+    <Compile Include="Domain\TipoInstrumentoLegal.cs" />
+    <Compile Include="Domain\TipoLicencia.cs" />
+    <Compile Include="Domain\TipoNota.cs" />
+    <Compile Include="Domain\TipoNovedad.cs" />
+    <Compile Include="Domain\TipoPuesto.cs" />
+    <Compile Include="Domain\ConfiguracionAsigEspecial.cs" />
+    <Compile Include="Domain\ConfiguracionTurno.cs" />
+    <Compile Include="Domain\Contrato.cs" />
+    <Compile Include="Domain\Asignatura.cs" />
+    <Compile Include="Domain\AsignacionInstrumentoLegal.cs" />
+    <Compile Include="Domain\DetalleSeccion.cs" />
+    <Compile Include="Domain\Especialidad.cs" />
+    <Compile Include="Domain\EstadoPedidoAutorizacionCierre.cs" />
+    <Compile Include="Domain\EstadoPuesto.cs" />
+    <Compile Include="Domain\Grupo.cs" />
+    <Compile Include="Domain\HistorialEscuelaPrivada.cs" />
+    <Compile Include="Domain\HistorialInspeccion.cs" />
+    <Compile Include="Domain\ModalidadJornada.cs" />
+    <Compile Include="Domain\NivelEducativoPorTipoEducacion.cs" />
+    <Compile Include="Domain\ObraSocial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\Orientacion.cs" />
+    <Compile Include="Domain\PedidoAutorizacionCierre.cs" />
+    <Compile Include="Domain\PuestoDeTrabajo.cs" />
+    <Compile Include="Domain\Desdoblamiento.cs" />
+    <Compile Include="Domain\DetalleAsignatura.cs" />
+    <Compile Include="Domain\DetalleHorario.cs" />
+    <Compile Include="Domain\DetalleSubGrupo.cs" />
+    <Compile Include="Domain\Banco.cs" />
+    <Compile Include="Domain\EscuelaPlan.cs" />
+    <Compile Include="Domain\Equivalencia.cs" />
+    <Compile Include="Domain\Correlatividad.cs" />
+    <Compile Include="Domain\Estatuto.cs" />
+    <Compile Include="Domain\GradoAnio.cs" />
+    <Compile Include="Domain\GrupoPartida.cs" />
+    <Compile Include="Domain\HistorialCargoMinimo.cs" />
+    <Compile Include="Domain\HistorialDireccionDeNivel.cs" />
+    <Compile Include="Domain\HistorialEmpresa.cs" />
+    <Compile Include="Domain\HistorialEscuela.cs" />
+    <Compile Include="Domain\HistorialLocal.cs" />
+    <Compile Include="Domain\HistorialPartidaPresupuestaria.cs" />
+    <Compile Include="Domain\ItemStock.cs" />
+    <Compile Include="Domain\NivelEducativo.cs" />
+    <Compile Include="Domain\Parametro.cs" />
+    <Compile Include="Domain\PartidaPresupuestaria.cs" />
+    <Compile Include="Domain\PeriodoLectivo.cs" />
+    <Compile Include="Domain\PersonaJuridica.cs" />
+    <Compile Include="Domain\Planta.cs" />
+    <Compile Include="Domain\ProgramaPresupuestario.cs" />
+    <Compile Include="Domain\Resolucion.cs" />
+    <Compile Include="Domain\RolPorUsuario.cs" />
+    <Compile Include="Domain\Seccion.cs" />
+    <Compile Include="Domain\SubGrupo.cs" />
+    <Compile Include="Domain\DepartamentoProvincial.cs" />
+    <Compile Include="Domain\Deposito.cs" />
+    <Compile Include="Domain\DetalleHoraTurno.cs" />
+    <Compile Include="Domain\DiagramacionCurso.cs" />
+    <Compile Include="Domain\DireccionDeNivel.cs" />
+    <Compile Include="Domain\Domicilio.cs" />
+    <Compile Include="Domain\Edificio.cs" />
+    <Compile Include="Domain\EmpresaBase.cs" />
+    <Compile Include="Domain\EmpresaExterna.cs" />
+    <Compile Include="Domain\Escuela.cs" />
+    <Compile Include="Domain\EscuelaPrivada.cs" />
+    <Compile Include="Domain\Estudiante.cs" />
+    <Compile Include="Domain\Expediente.cs" />
+    <Compile Include="Domain\FuncionEdificio.cs" />
+    <Compile Include="Domain\HistorialEdificio.cs" />
+    <Compile Include="Domain\HistorialInspeccionIntermedia.cs" />
+    <Compile Include="Domain\HistorialPredio.cs" />
+    <Compile Include="Domain\IEntity.cs" />
+    <Compile Include="Domain\Inscripcion.cs" />
+    <Compile Include="Domain\Inspeccion.cs" />
+    <Compile Include="Domain\InstrumentoLegal.cs" />
+    <Compile Include="Domain\Local.cs" />
+    <Compile Include="Domain\Localidad.cs" />
+    <Compile Include="Domain\OrdenDePago.cs" />
+    <Compile Include="Domain\Pais.cs" />
+    <Compile Include="Domain\Parcela.cs" />
+    <Compile Include="Domain\PersonaFisica.cs" />
+    <Compile Include="Domain\PlanEstudio.cs" />
+    <Compile Include="Domain\Plano.cs" />
+    <Compile Include="Domain\Predio.cs" />
+    <Compile Include="Domain\Provincia.cs" />
+    <Compile Include="Domain\Servicio.cs" />
+    <Compile Include="Domain\ServicioConfigurado.cs" />
+    <Compile Include="Domain\ServicioEntidad.cs" />
+    <Compile Include="Domain\SubOrientacion.cs" />
+    <Compile Include="Domain\SucursalBanco.cs" />
+    <Compile Include="Domain\TipoAdquisicion.cs" />
+    <Compile Include="Domain\TipoCargo.cs" />
+    <Compile Include="Domain\TipoEntidad.cs" />
+    <Compile Include="Domain\TipoEscuela.cs" />
+    <Compile Include="Domain\TipoEstructuraEdilicia.cs" />
+    <Compile Include="Domain\TipoInspeccionIntermedia.cs" />
+    <Compile Include="Domain\TipoJornada.cs" />
+    <Compile Include="Domain\TipoLocal.cs" />
+    <Compile Include="Domain\TipoMovimientoInstrumentoLegal.cs" />
+    <Compile Include="Domain\OperacionEdificio.cs" />
+    <Compile Include="Domain\OperacionPredio.cs" />
+    <Compile Include="Domain\TipoSancion.cs" />
+    <Compile Include="Domain\Titulo.cs" />
+    <Compile Include="Domain\TituloAgente.cs" />
+    <Compile Include="Domain\TramiteAdquisicion.cs" />
+    <Compile Include="Domain\Turno.cs" />
+    <Compile Include="Domain\TurnoPorEscuela.cs" />
+    <Compile Include="Domain\UnidadAcademica.cs" />
+    <Compile Include="Domain\Usuario.cs" />
+    <Compile Include="Domain\ValorParametro.cs" />
+    <Compile Include="Domain\ValorPorAtributo.cs" />
+    <Compile Include="Domain\VinculoEmpresaEdificio.cs" />
+    <Compile Include="Domain\VinculoFamiliar.cs" />
+    <Compile Include="Domain\ZonaDesfavorable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Siage.Base\Siage.Base.csproj">
+      <Project>{2480EC80-6DEC-40A8-ACC4-3F7949B9A678}</Project>
+      <Name>Siage.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
